@@ -1,0 +1,184 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<BaseLayout title="Research | Christopher Hogg" description="Research interests, publications, and academic output by Christopher Hogg at Royal Holloway, University of London.">
+
+  <!-- Gradient Hero -->
+  <section class="hero-gradient hero-gradient--research grain relative">
+    <!-- Decorative elements -->
+    <div class="deco-circle w-[400px] h-[400px] -top-32 -right-32 absolute animate-shimmer"></div>
+    <div class="deco-dots bottom-10 left-10 absolute opacity-20"></div>
+    <div class="container py-20 md:py-28">
+      <p class="label text-gold mb-4 fade-in">Research</p>
+      <h1 class="heading-xl text-white mb-6 fade-in">Exploring the intersection of new writing, emerging technologies, and the human experience.</h1>
+    </div>
+  </section>
+
+  <!-- Three Research Strands — with unique colored borders -->
+  <section class="section-white py-20 md:py-28">
+    <div class="container">
+      <div class="grid gap-6 lg:grid-cols-3 stagger">
+        <div class="card border-t-gold fade-in">
+          <div class="icon mb-4" style="--icon-bg: rgba(196,154,60,0.15);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="label text-gold mb-3 block">Strand 1</span>
+          <h3 class="heading-md mb-3">New Writing + Emerging Technologies</h3>
+          <p class="text-ash leading-relaxed">
+            Pioneering work combining creative writing with emerging tech, using podcasts, AI, and digital platforms to reach audiences that traditional forms cannot. From BBC award-winning podcast drama to smartphone musicals, this strand explores how new technologies create new narrative forms.
+          </p>
+        </div>
+        <div class="card border-t-rathband fade-in">
+          <div class="icon mb-4" style="--icon-bg: rgba(139,26,26,0.12); --icon-color: #8B1A1A;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="0.5" fill="currentColor"/></svg>
+          </div>
+          <span class="label mb-3 block" style="color: #8B1A1A;">Strand 2</span>
+          <h3 class="heading-md mb-3">AI, Creativity &amp; Education</h3>
+          <p class="text-ash leading-relaxed">
+            Exploring how AI is reshaping human creativity, how students perceive their own intelligence relative to AI, and how assessment must evolve. This work has generated significant public attention via Times Higher Education and Wonkhe, challenging assumptions about authentic assessment in the age of generative AI.
+          </p>
+        </div>
+        <div class="card border-t-cassie fade-in">
+          <div class="icon mb-4" style="--icon-bg: rgba(123,45,139,0.12); --icon-color: #7B2D8B;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <span class="label mb-3 block" style="color: #7B2D8B;">Strand 3</span>
+          <h3 class="heading-md mb-3">Trauma, Identity &amp; Digital Mediation</h3>
+          <p class="text-ash leading-relaxed">
+            Running through all creative work is an exploration of how technology mediates human suffering, identity, and connection — from the Rathband tragedy to memoir about childhood domestic violence. Asking: what intelligence does trauma create? Can a virtual being built from memoir text enhance understanding of lived experience?
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section class="section-parchment py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Publications &amp; Outputs" subtitle="11 research outputs across books, journal articles, conference papers, and performances." />
+
+      <!-- Books -->
+      <div class="mb-14 fade-in">
+        <h3 class="label text-gold mb-5">
+          <svg class="inline-block w-4 h-4 mr-1 -mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Books
+        </h3>
+        <div class="space-y-4">
+          <div class="card border-l-holidays">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+              <h4 class="heading-sm">9 Holidays I Wish I Had Never Been On</h4>
+              <span class="font-mono text-[0.68rem] text-fossil uppercase tracking-wider">2023</span>
+            </div>
+            <p class="text-ash text-sm">425-page memoir published via Substack. Invited by Palgrave "Studies in Life Writing" to submit a proposal for an 80,000-word experimental book.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Journal Articles -->
+      <div class="mb-14 fade-in">
+        <h3 class="label text-gold mb-5">
+          <svg class="inline-block w-4 h-4 mr-1 -mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          Journal Articles &amp; Press
+        </h3>
+        <div class="space-y-4">
+          <div class="card border-l-gold">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+              <h4 class="heading-sm">"What I learned when students walked out of my AI class"</h4>
+              <span class="font-mono text-[0.68rem] text-fossil uppercase tracking-wider">May 2025</span>
+            </div>
+            <p class="text-ash text-sm">Times Higher Education, Open Access</p>
+          </div>
+          <div class="card border-l-gold">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+              <h4 class="heading-sm">"To demystify AI for your students, use performance"</h4>
+              <span class="font-mono text-[0.68rem] text-fossil uppercase tracking-wider">Oct 2024</span>
+            </div>
+            <p class="text-ash text-sm">Times Higher Education, Open Access (co-authored with Will Shuler)</p>
+          </div>
+          <div class="card border-l-gold">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+              <h4 class="heading-sm">"What does authentic assessment mean in the context of AI?"</h4>
+              <span class="font-mono text-[0.68rem] text-fossil uppercase tracking-wider">2025</span>
+            </div>
+            <p class="text-ash text-sm">Wonkhe</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conference Papers -->
+      <div class="mb-14 fade-in">
+        <h3 class="label text-gold mb-5">
+          <svg class="inline-block w-4 h-4 mr-1 -mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Conference Papers
+        </h3>
+        <div class="space-y-4">
+          <div class="card border-l-rathband">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+              <h4 class="heading-sm">"Replacing Dali with DALL:E — Recreating a 1960s 'Happening'"</h4>
+              <span class="font-mono text-[0.68rem] text-fossil uppercase tracking-wider">Oct 2024</span>
+            </div>
+            <p class="text-ash text-sm">Cambridge Gen AI in Education Conference. Understanding the impact of industrialised creativity on performance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performances -->
+      <div class="mb-14 fade-in">
+        <h3 class="label text-gold mb-5">
+          <svg class="inline-block w-4 h-4 mr-1 -mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          Performances
+        </h3>
+        <div class="space-y-4">
+          <div class="card border-l-cassie">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+              <h4 class="heading-sm">Cassie &amp; Corey</h4>
+              <span class="font-mono text-[0.68rem] text-fossil uppercase tracking-wider">2020</span>
+            </div>
+            <p class="text-ash text-sm">A drum &amp; bass musical about eating disorders. Silver &amp; Bronze at British Podcast Awards.</p>
+          </div>
+          <div class="card border-l-rathband">
+            <div class="flex flex-wrap items-start justify-between gap-2 mb-1">
+              <h4 class="heading-sm">Rathband</h4>
+              <span class="font-mono text-[0.68rem] text-fossil uppercase tracking-wider">2017</span>
+            </div>
+            <p class="text-ash text-sm">A digital tragedy. BBC Podcast of the Year.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link to Pure Portal -->
+      <div class="text-center fade-in">
+        <a href="https://pure.royalholloway.ac.uk" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          View on Royal Holloway Pure Research Portal &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Current Projects -->
+  <section class="section-white py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Current Projects" />
+
+      <div class="grid gap-6 md:grid-cols-2 stagger">
+        <div class="card border-t-holidays fade-in">
+          <span class="badge-outline mb-4">2023 — Present</span>
+          <h3 class="heading-md mb-3">AI &amp; Memoir Research</h3>
+          <p class="text-ash leading-relaxed">
+            Exploring whether a "virtual being" built from memoir text can enhance understanding of trauma. Can a virtual representation of one's childhood self, constrained in knowledge to a specific timeframe, offer new therapeutic pathways?
+          </p>
+        </div>
+        <div class="card border-t-gold fade-in">
+          <span class="badge-outline mb-4">2026 — 2029</span>
+          <h3 class="heading-md mb-3">MOOC: Narrative Foundations for Immersive Media</h3>
+          <p class="text-ash leading-relaxed">
+            Developing a massive open online course on narrative foundations for immersive media and video games, bringing storytelling expertise to emerging interactive formats.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

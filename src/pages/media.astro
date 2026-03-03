@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<BaseLayout title="Media & Speaking | Christopher Hogg" description="Awards, speaking engagements, and media appearances by Christopher Hogg.">
+
+  <!-- Gradient Hero with image -->
+  <section class="hero-banner" style="min-height: 45vh;">
+    <div class="hero-banner-bg">
+      <img src="/images/chris-speaking.jpg" alt="" loading="eager" aria-hidden="true" />
+    </div>
+    <div class="container">
+      <p class="label text-gold mb-3 fade-in">Media & Speaking</p>
+      <h1 class="heading-xl text-white fade-in">Media &amp; Speaking</h1>
+      <p class="text-[#a09890] text-lg mt-4 max-w-xl fade-in">Awards, invited talks, and public engagement.</p>
+    </div>
+  </section>
+
+  <!-- Awards — visually striking stat cards -->
+  <section class="section-paper py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Awards" />
+
+      <div class="grid gap-6 md:grid-cols-2 mb-16 stagger">
+        <div class="stat-card fade-in" style="--stat-bg: #8B1A1A; --stat-bg-end: #6a1414;">
+          <p class="stat-number">BBC</p>
+          <p class="stat-label mb-3">Podcast of the Year</p>
+          <p class="text-white/70 text-sm">Rathband: A Digital Tragedy (2018)</p>
+        </div>
+        <div class="stat-card fade-in" style="--stat-bg: #7B2D8B; --stat-bg-end: #5a2066;">
+          <p class="stat-number">BPA</p>
+          <p class="stat-label mb-3">Silver &amp; Bronze</p>
+          <p class="text-white/70 text-sm">British Podcast Awards, Drama &amp; Wellbeing (Cassie &amp; Corey)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speaking Engagements — with images interspersed -->
+  <section class="section-white py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Speaking &amp; Talks" />
+
+      <!-- Image strip -->
+      <div class="grid grid-cols-3 gap-3 mb-12">
+        <div class="rounded-lg overflow-hidden aspect-video">
+          <img src="/images/chris-tedx.jpg" alt="Christopher at TEDxUAL" class="w-full h-full object-cover object-top" loading="lazy" />
+        </div>
+        <div class="rounded-lg overflow-hidden aspect-video">
+          <img src="/images/chris-presenting.jpg" alt="Christopher presenting" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-lg overflow-hidden aspect-video">
+          <img src="/images/chris-speaking.jpg" alt="Christopher speaking" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="space-y-4 max-w-3xl stagger">
+        <div class="card border-l-gold fade-in">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+            <div>
+              <h3 class="heading-sm">Great British Talks: "How to Protect your Creativity in the Age of AI"</h3>
+              <p class="text-ash text-sm mt-1">Invited talk at universities in Bangalore and Mumbai, India</p>
+            </div>
+            <span class="badge">Jan 2026</span>
+          </div>
+        </div>
+
+        <div class="card border-l-rathband fade-in">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+            <div>
+              <h3 class="heading-sm">"Remixing Education: AI, Storytelling, and the Teacher as Game Master"</h3>
+              <p class="text-ash text-sm mt-1">Invited talk</p>
+            </div>
+            <span class="badge">Jul 2025</span>
+          </div>
+        </div>
+
+        <div class="card border-l-cassie fade-in">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+            <div>
+              <h3 class="heading-sm">Media Mag Student Conference: "Protecting your Creativity"</h3>
+              <p class="text-ash text-sm mt-1">Invited talk</p>
+            </div>
+            <span class="badge">Jan 2025</span>
+          </div>
+        </div>
+
+        <div class="card border-l-holidays fade-in">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+            <div>
+              <h3 class="heading-sm">"Replacing Dali with DALL:E"</h3>
+              <p class="text-ash text-sm mt-1">Cambridge Gen AI in Education Conference</p>
+            </div>
+            <span class="badge">Oct 2024</span>
+          </div>
+        </div>
+
+        <div class="card border-l-letto fade-in">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+            <div>
+              <h3 class="heading-sm">StoryFutures Academy Podcast</h3>
+              <p class="text-ash text-sm mt-1">Public engagement, Royal Holloway</p>
+            </div>
+            <span class="badge">Nov 2020</span>
+          </div>
+        </div>
+
+        <div class="card border-l-rathband fade-in">
+          <div class="flex flex-wrap items-start justify-between gap-4 mb-2">
+            <div>
+              <h3 class="heading-sm">TEDxUAL</h3>
+              <p class="text-ash text-sm mt-1">Talk on the Rathband play and the role of social media in mediating tragedy</p>
+            </div>
+            <span class="badge">2017</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

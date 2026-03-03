@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teaching — Christopher Hogg</title>
+  <meta name="description" content="Teaching philosophy, modules, classroom experiments, and how creative practice informs pedagogy.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .page-intro {
+      padding: var(--space-3xl) 0 var(--space-2xl);
+    }
+    @media (min-width: 768px) {
+      .page-intro { padding: 6rem 0 var(--space-2xl); }
+    }
+
+    /* Philosophy block */
+    .philosophy {
+      padding: var(--space-2xl) 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .philosophy__text {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      max-width: var(--container-text);
+    }
+
+    .philosophy__text p {
+      margin-bottom: var(--space-lg);
+    }
+
+    /* Module cards */
+    .module {
+      padding: var(--space-xl);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      transition: border-color 0.2s ease;
+    }
+
+    .module:hover {
+      border-color: var(--accent);
+    }
+
+    .module__level {
+      font-family: var(--font-mono);
+      font-size: 0.58rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-tertiary);
+      margin-bottom: var(--space-sm);
+    }
+
+    .module__title {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-bottom: var(--space-sm);
+      font-variation-settings: 'SOFT' 0, 'WONK' 1;
+    }
+
+    .module__desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Experiment items */
+    .experiment {
+      padding: var(--space-lg) 0;
+      border-bottom: 1px solid var(--rule-light);
+    }
+
+    .experiment:last-child { border-bottom: none; }
+
+    .experiment__label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: var(--space-xs);
+    }
+
+    .experiment__title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: var(--space-xs);
+      font-variation-settings: 'SOFT' 0, 'WONK' 1;
+    }
+
+    .experiment__desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 38em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Christopher Hogg — Home">
+        <img src="images/signature-logo.jpg" alt="Christopher Hogg">
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="writing.html">Writing</a>
+        <a href="teaching.html" class="active">Teaching</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="writing.html">Writing</a>
+    <a href="teaching.html" class="active">Teaching</a>
+    <a href="speaking.html">Speaking</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="header-spacer"></div>
+
+
+  <!-- PAGE INTRO -->
+  <section class="page-intro">
+    <div class="container">
+      <h1 class="fade-up">Teaching</h1>
+      <p class="premise fade-up">
+        Notes from the edge of teaching. How creative practice informs pedagogy, what AI is doing to the classroom, and why storytelling might be the most underrated technology in education.
+      </p>
+      <hr class="rule rule--accent mt-xl fade-up">
+    </div>
+  </section>
+
+
+  <!-- HERO IMAGE -->
+  <section class="container" style="padding-bottom: var(--space-xl);">
+    <figure class="fade-up" style="margin: 0;">
+      <img src="images/chris-writing-bw.jpg" alt="Christopher Hogg writing" class="img-editorial" style="aspect-ratio: 4/3; object-fit: cover; object-position: center center; width: 100%; max-width: 40rem;">
+      <figcaption style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); margin-top: var(--space-sm); letter-spacing: 0.04em;">Writing &mdash; where the teaching starts</figcaption>
+    </figure>
+  </section>
+
+
+  <!-- PHILOSOPHY -->
+  <section class="container">
+    <div class="philosophy">
+      <p class="label mb-lg fade-up">Teaching Philosophy</p>
+      <div class="philosophy__text fade-up">
+        <p>
+          Teaching is not a side activity. It is the centre of the practice. Every project, every piece of writing, every public argument begins in or returns to the classroom. The best creative work I have made has come from teaching; the best teaching I have done has been informed by making.
+        </p>
+        <p>
+          I am interested in what happens when you bring real creative technologies&mdash;including AI&mdash;into the room and let students discover both the power and the limits. Not as evangelism, not as panic, but as critical, hands-on inquiry.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- MODULES -->
+  <section class="section">
+    <div class="container">
+      <p class="label mb-xl fade-up">Current Modules</p>
+      <div class="grid-3 stagger">
+        <div class="module fade-up">
+          <p class="module__level">Undergraduate &middot; Royal Holloway</p>
+          <h3 class="module__title">Creative Digital &amp; Social Media</h3>
+          <p class="module__desc">Core module examining how digital platforms shape creative practice, public discourse, and cultural production.</p>
+        </div>
+        <div class="module fade-up">
+          <p class="module__level">MOOC &middot; In development</p>
+          <h3 class="module__title">Narrative Foundations for Immersive Media and Video Games</h3>
+          <p class="module__desc">A massive open online course. Launching 2026&ndash;2029. Built at Royal Holloway.</p>
+        </div>
+        <div class="module fade-up">
+          <p class="module__level">Workshops &middot; Various</p>
+          <h3 class="module__title">AI in the Classroom: What Actually Works</h3>
+          <p class="module__desc">Public workshops exploring practical, honest approaches to AI in creative and humanities education.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CLASSROOM EXPERIMENTS -->
+  <section class="section section--alt">
+    <div class="container">
+      <p class="label mb-xl fade-up">Classroom Experiments</p>
+
+      <div class="fade-up">
+        <div class="experiment">
+          <p class="experiment__label">AI &amp; Creativity</p>
+          <h3 class="experiment__title">Replacing Dal&iacute; with DALL&middot;E</h3>
+          <p class="experiment__desc">Recreating a 1960s &lsquo;Happening&rsquo; with AI tools to understand what changes when machines join the creative process. Presented at Cambridge, 2024.</p>
+        </div>
+
+        <div class="experiment">
+          <p class="experiment__label">Student Response</p>
+          <h3 class="experiment__title">The Walkout</h3>
+          <p class="experiment__desc">What happened when students refused to engage with AI in the classroom, and what that refusal taught everyone. Written up for <a href="https://www.timeshighereducation.com/campus/what-i-learned-when-students-walked-out-my-ai-class" target="_blank" rel="noopener" style="color: var(--accent);">Times Higher Education</a>.</p>
+        </div>
+
+        <div class="experiment">
+          <p class="experiment__label">Practice-led Research</p>
+          <h3 class="experiment__title">Memoir as Method</h3>
+          <p class="experiment__desc">Using personal narrative and AI-assisted memory reconstruction as a teaching tool for understanding digital identity.</p>
+        </div>
+      </div>
+
+      <figure class="fade-up" style="margin-top: var(--space-xl); max-width: 32rem;">
+        <img src="images/chris-presenting.jpg" alt="Christopher Hogg in the classroom" class="img-editorial" style="aspect-ratio: 16/9;">
+        <figcaption style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); margin-top: var(--space-sm); letter-spacing: 0.04em;">Workshop session — AI in the creative classroom</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- RESEARCH CONTEXT -->
+  <section class="section">
+    <div class="container">
+      <p class="label mb-xl fade-up">Research Context</p>
+      <div class="grid-editorial grid-editorial--asymmetric fade-up">
+        <div>
+          <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; max-width: 34em;">
+            Teaching and research at Royal Holloway sit within the Department of Media Arts, connected to <strong style="color: var(--text); font-weight: 500;">StoryFutures</strong> and the <strong style="color: var(--text); font-weight: 500;">CoSTAR National Lab</strong> for Creative Technologies. Research interests include AI and creativity, digital storytelling, practice-based research, and the pedagogy of creative technology.
+          </p>
+        </div>
+        <div>
+          <div class="signal-box" style="margin: 0;">
+            <div class="signal-box__item">
+              <p class="signal-box__label">Institution</p>
+              <p class="signal-box__value">Royal Holloway</p>
+            </div>
+            <div class="signal-box__item">
+              <p class="signal-box__label">Department</p>
+              <p class="signal-box__value">Media Arts</p>
+            </div>
+            <div class="signal-box__item">
+              <p class="signal-box__label">Centres</p>
+              <p class="signal-box__value">StoryFutures, CoSTAR</p>
+            </div>
+            <div class="signal-box__item">
+              <p class="signal-box__label">Focus</p>
+              <p class="signal-box__value">AI, creativity, pedagogy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" style="display: inline-block; margin-bottom: var(--space-md);">
+            <img src="images/signature-logo.jpg" alt="Christopher Hogg" style="height: 1.8rem; width: auto; filter: invert(1) brightness(0.8);">
+          </a>
+          <p style="font-size: 0.88rem; color: var(--text-tertiary); max-width: 24em; line-height: 1.7;">
+            Writer, educator, and creative technologist. Lecturer at Royal Holloway, University of London.
+          </p>
+        </div>
+        <div>
+          <p class="label" style="color: var(--text-tertiary); margin-bottom: var(--space-md);">Elsewhere</p>
+          <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+            <a href="https://www.linkedin.com/in/christopherhogg1/" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">LinkedIn</a>
+            <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Substack</a>
+            <a href="https://www.instagram.com/goldenanorak" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Instagram</a>
+            <a href="https://x.com/goldenanorak" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">X / Twitter</a>
+            <a href="https://open.spotify.com/show/43XCZFTyK1dF0DmAMzghWY" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Spotify</a>
+          </div>
+        </div>
+        <div>
+          <p class="label" style="color: var(--text-tertiary); margin-bottom: var(--space-md);">Subscribe</p>
+          <p style="font-size: 0.82rem; color: var(--text-tertiary); max-width: 20em; line-height: 1.6; margin-bottom: var(--space-md);">
+            New writing on AI, creativity, education, and memoir. Delivered occasionally, never aggressively.
+          </p>
+          <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="btn btn--outline" style="border-color: var(--rule-dark); color: var(--text-tertiary);">
+            Read on Substack
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); letter-spacing: 0.04em;">
+          &copy; 2026 Christopher Hogg
+        </p>
+        <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); letter-spacing: 0.04em;">
+          Built with restraint.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuBtn.classList.toggle('open', isOpen);
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    const observer = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+    );
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>

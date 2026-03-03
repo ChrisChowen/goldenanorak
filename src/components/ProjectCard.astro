@@ -1,0 +1,35 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  href: string;
+  tags?: string[];
+  award?: string;
+  year?: string;
+}
+
+const { title, description, href, tags = [], award, year } = Astro.props;
+---
+
+<a href={href} class="card group block">
+  <div class="flex items-start justify-between gap-4 mb-3">
+    <h3 class="heading-sm group-hover:text-gold transition-colors">{title}</h3>
+    {year && <span class="font-mono text-[0.68rem] text-fossil uppercase tracking-wider shrink-0">{year}</span>}
+  </div>
+
+  {award && (
+    <div class="mb-3">
+      <span class="badge-ember">{award}</span>
+    </div>
+  )}
+
+  <p class="text-ash text-sm leading-relaxed mb-4">{description}</p>
+
+  {tags.length > 0 && (
+    <div class="flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <span class="badge-outline">{tag}</span>
+      ))}
+    </div>
+  )}
+</a>

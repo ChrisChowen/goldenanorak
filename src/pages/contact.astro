@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<BaseLayout title="Contact | Christopher Hogg" description="Get in touch with Christopher Hogg for speaking engagements, commissions, collaboration, or research enquiries.">
+
+  <!-- Gradient Hero -->
+  <section class="hero-gradient hero-gradient--contact grain relative">
+    <div class="deco-circle w-[300px] h-[300px] -bottom-20 -right-20 absolute animate-shimmer"></div>
+    <div class="container py-20 md:py-28">
+      <p class="label text-gold mb-4 fade-in">Contact</p>
+      <h1 class="heading-xl text-white mb-4 fade-in">Get in Touch</h1>
+      <p class="text-[#a09890] text-lg max-w-xl fade-in">Interested in commissioning work, collaborating on research, or inviting Christopher to speak? Reach out.</p>
+    </div>
+  </section>
+
+  <section class="section-paper py-20 md:py-28">
+    <div class="container max-w-3xl">
+
+      <div class="grid gap-8 md:grid-cols-2 mb-16">
+        <!-- Contact Info — with icons -->
+        <div class="space-y-5 stagger">
+          <div class="card border-l-gold fade-in">
+            <div class="flex items-start gap-4">
+              <div class="icon" style="--icon-bg: rgba(196,154,60,0.15);">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h3 class="heading-sm mb-2">Email</h3>
+                <p class="text-ash text-sm mb-3">For professional enquiries:</p>
+                <a href="mailto:christopher.hogg@rhul.ac.uk" class="font-mono text-sm text-gold hover:text-graphite transition-colors">
+                  christopher.hogg@rhul.ac.uk
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-l-rathband fade-in">
+            <div class="flex items-start gap-4">
+              <div class="icon" style="--icon-bg: rgba(139,26,26,0.12); --icon-color: #8B1A1A;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+              </div>
+              <div>
+                <h3 class="heading-sm mb-2">Speaking</h3>
+                <p class="text-ash text-sm">
+                  Available for invited talks, keynotes, and panel discussions on AI &amp; creativity, digital storytelling, and higher education innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card border-l-holidays fade-in">
+            <div class="flex items-start gap-4">
+              <div class="icon" style="--icon-bg: rgba(212,118,10,0.12); --icon-color: #D4760A;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+              </div>
+              <div>
+                <h3 class="heading-sm mb-2">Commissions</h3>
+                <p class="text-ash text-sm">
+                  Open to commissions for podcast drama, digital theatre, and creative writing projects.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links — with platform colors on hover -->
+        <div>
+          <h3 class="heading-md mb-6">Connect</h3>
+          <div class="space-y-3 stagger">
+            <a href="https://www.linkedin.com/in/chrishogg" target="_blank" rel="noopener noreferrer" class="card group block fade-in hover-linkedin" style="transition: all 0.3s ease;">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="heading-sm group-hover:text-[#0077B5] transition-colors">LinkedIn</h4>
+                  <p class="text-ash text-sm">Professional network &amp; articles</p>
+                </div>
+                <span class="text-fossil group-hover:text-[#0077B5] transition-colors">&rarr;</span>
+              </div>
+            </a>
+            <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener noreferrer" class="card group block fade-in hover-substack" style="transition: all 0.3s ease;">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="heading-sm group-hover:text-[#FF6719] transition-colors">Substack</h4>
+                  <p class="text-ash text-sm">Weekly writing &amp; memoir</p>
+                </div>
+                <span class="text-fossil group-hover:text-[#FF6719] transition-colors">&rarr;</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/goldenanorak" target="_blank" rel="noopener noreferrer" class="card group block fade-in hover-instagram" style="transition: all 0.3s ease;">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="heading-sm group-hover:text-[#E4405F] transition-colors">Instagram</h4>
+                  <p class="text-ash text-sm">@goldenanorak</p>
+                </div>
+                <span class="text-fossil group-hover:text-[#E4405F] transition-colors">&rarr;</span>
+              </div>
+            </a>
+            <a href="https://x.com/goldenanorak" target="_blank" rel="noopener noreferrer" class="card group block fade-in hover-twitter" style="transition: all 0.3s ease;">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="heading-sm group-hover:text-[#1DA1F2] transition-colors">X / Twitter</h4>
+                  <p class="text-ash text-sm">@goldenanorak</p>
+                </div>
+                <span class="text-fossil group-hover:text-[#1DA1F2] transition-colors">&rarr;</span>
+              </div>
+            </a>
+            <a href="https://pure.royalholloway.ac.uk" target="_blank" rel="noopener noreferrer" class="card group block fade-in">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h4 class="heading-sm group-hover:text-gold transition-colors">Royal Holloway Pure</h4>
+                  <p class="text-ash text-sm">Research portal &amp; publications</p>
+                </div>
+                <span class="text-fossil group-hover:text-gold transition-colors">&rarr;</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

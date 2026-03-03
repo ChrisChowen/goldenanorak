@@ -1,0 +1,100 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+}
+
+const {
+  title,
+  description = 'Christopher Hogg — Creative Technologist, Educator, and Playwright. Lecturer at Royal Holloway, University of London.',
+  ogImage = '/images/og-default.jpg'
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+
+    <!-- View Transitions -->
+    <ViewTransitions />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Christopher Hogg",
+      "url": "https://christopherhogg.net",
+      "jobTitle": "Lecturer in Creative Digital & Social Media",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Royal Holloway, University of London"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/chrishogg",
+        "https://christopherhogg.substack.com",
+        "https://www.instagram.com/goldenanorak"
+      ]
+    })} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Nav />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+
+    <!-- Scroll fade-in observer with stagger support -->
+    <script>
+      function initObserver() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+              }
+            });
+          },
+          { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+        );
+
+        document.querySelectorAll('.fade-in, .text-reveal').forEach((el) => observer.observe(el));
+      }
+
+      // Run on initial load
+      initObserver();
+
+      // Re-run after View Transition navigation
+      document.addEventListener('astro:after-swap', initObserver);
+    </script>
+  </body>
+</html>

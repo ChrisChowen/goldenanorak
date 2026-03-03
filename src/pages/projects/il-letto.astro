@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Il Letto | Christopher Hogg" description="A play about Elvira Bonturi, Puccini's wife. Commissioned by Copenhagen Opera Festival via Helios Collective.">
+
+  <!-- Hero Image -->
+  <div class="w-full">
+    <img src="/images/il-letto.jpg" alt="Il Letto" class="hero-image" loading="eager" />
+  </div>
+
+  <section class="section-paper py-16 md:py-24">
+    <div class="container max-w-3xl">
+      <a href="/projects" class="label text-gold hover:text-graphite transition-colors mb-8 inline-block">&larr; All Projects</a>
+
+      <div class="accent-line mb-6" style="background-color: var(--color-letto);"></div>
+      <span class="badge-letto mb-4">Commission</span>
+      <h1 class="heading-lg mt-4 mb-6">Il Letto</h1>
+
+      <div class="flex flex-wrap gap-2 mb-10">
+        <span class="badge-outline">Opera</span>
+        <span class="badge-outline">Commission</span>
+        <span class="badge-outline">Copenhagen Opera Festival</span>
+        <span class="badge-outline">2017</span>
+      </div>
+
+      <div class="space-y-6 text-graphite leading-relaxed">
+        <p class="text-lg font-light">
+          A play about <strong>Elvira Bonturi</strong>, Puccini's wife, commissioned by the <strong>Copenhagen Opera Festival</strong> via <strong>Helios Collective</strong> in February 2017.
+        </p>
+
+        <p>
+          Il Letto explores the untold story behind one of opera's greatest composers, through the eyes of the woman who lived with his genius, his infidelities, and the tragedy that followed.
+        </p>
+
+        <!-- Puccini's Bed image -->
+        <div class="rounded-lg overflow-hidden my-10 shadow-lg">
+          <img src="/images/puccini-bed.jpg" alt="Puccini's bed — inspiration for Il Letto" class="w-full object-cover" loading="lazy" />
+          <div class="bg-parchment px-4 py-3 text-center">
+            <p class="text-ash text-sm italic">Puccini's bed — the inspiration for the title and central image of the play</p>
+          </div>
+        </div>
+
+        <blockquote class="pull-quote my-10" style="border-color: var(--color-letto);">
+          The untold story behind one of opera's greatest composers, through the eyes of the woman who lived with his genius, his infidelities, and the tragedy that followed.
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

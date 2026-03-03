@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SpotifyEmbed from '../../components/SpotifyEmbed.astro';
+---
+
+<BaseLayout title="Rathband: A Digital Tragedy | Christopher Hogg" description="BBC Podcast of the Year. A 3-part podcast exploring how social media mediates trauma, disability, and masculinity.">
+
+  <!-- Hero Image -->
+  <div class="w-full">
+    <img src="/images/rathband-hero.jpg" alt="Rathband: A Digital Tragedy" class="hero-image" loading="eager" />
+  </div>
+
+  <section class="section-paper py-16 md:py-24">
+    <div class="container max-w-3xl">
+      <a href="/projects" class="label text-gold hover:text-graphite transition-colors mb-8 inline-block">&larr; All Projects</a>
+
+      <div class="accent-line mb-6" style="background-color: var(--color-rathband);"></div>
+      <span class="badge-rathband mb-4">BBC Podcast of the Year</span>
+      <h1 class="heading-lg mt-4 mb-6">Rathband: A Digital Tragedy</h1>
+
+      <div class="flex flex-wrap gap-2 mb-10">
+        <span class="badge-outline">Podcast</span>
+        <span class="badge-outline">Arts Council England</span>
+        <span class="badge-outline">iTunes #1</span>
+        <span class="badge-outline">2017</span>
+      </div>
+
+      <div class="space-y-6 text-graphite leading-relaxed">
+        <p class="text-lg font-light">
+          A 3-part iTunes podcast designed for visually impaired listenership, exploring the events surrounding PC David Rathband, who was shot and blinded by Raoul Moat in July 2010, and the role social media played in the tragedy that followed.
+        </p>
+
+        <p>
+          Funded by <strong>Arts Council England</strong>, Rathband reached #1 on iTunes and achieved over 30,000 downloads. The BBC described it as "technically stunning." The production featured <strong>Douglas Rushkoff</strong> appearing as himself.
+        </p>
+
+        <!-- Additional image: Rathband play artwork -->
+        <div class="rounded-lg overflow-hidden my-10">
+          <img src="/images/rathband-play.jpg" alt="Rathband play artwork" class="w-full object-cover" loading="lazy" />
+        </div>
+
+        <h3 class="heading-md mt-12 mb-4">Research Questions</h3>
+        <ul class="space-y-2 text-ash list-disc pl-5">
+          <li>How does social media mediate trauma, disability, and masculinity?</li>
+          <li>What happens when public and private identity collapse in the digital space?</li>
+          <li>Can digital forces be "tragic" in the classical dramatic sense?</li>
+          <li>How do new narrative forms emerge from new technologies?</li>
+        </ul>
+
+        <h3 class="heading-md mt-12 mb-4">Impact</h3>
+        <div class="grid gap-4 sm:grid-cols-3 my-6 stagger">
+          <div class="stat-card fade-in" style="--stat-bg: #8B1A1A; --stat-bg-end: #6a1414;">
+            <p class="stat-number">30k+</p>
+            <p class="stat-label">Downloads</p>
+          </div>
+          <div class="stat-card fade-in" style="--stat-bg: #8B1A1A; --stat-bg-end: #6a1414;">
+            <p class="stat-number">#1</p>
+            <p class="stat-label">iTunes</p>
+          </div>
+          <div class="stat-card fade-in" style="--stat-bg: #8B1A1A; --stat-bg-end: #6a1414;">
+            <p class="stat-number">BBC</p>
+            <p class="stat-label">Podcast of the Year</p>
+          </div>
+        </div>
+
+        <p>
+          Christopher also spoke at <strong>TEDxUAL</strong> about the Rathband play and the role social media played in these events.
+        </p>
+
+        <!-- TEDx image -->
+        <div class="rounded-lg overflow-hidden my-10">
+          <img src="/images/chris-tedx.jpg" alt="Christopher Hogg at TEDxUAL" class="w-full object-cover" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Spotify Embed — with project color -->
+      <div class="mt-14">
+        <h3 class="heading-md mb-4">Listen</h3>
+        <SpotifyEmbed uri="show/43XCZFTyK1dF0DmAMzghWY" title="Rathband Podcast" accentColor="#8B1A1A" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

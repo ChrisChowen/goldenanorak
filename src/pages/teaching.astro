@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<BaseLayout title="Teaching | Christopher Hogg" description="Teaching philosophy, courses, and innovations by Christopher Hogg at Royal Holloway, University of London.">
+
+  <!-- Hero Banner with chris-presenting image -->
+  <section class="hero-banner" style="min-height: 45vh;">
+    <div class="hero-banner-bg">
+      <img src="/images/chris-presenting.jpg" alt="" loading="eager" aria-hidden="true" />
+    </div>
+    <div class="container">
+      <p class="label text-gold mb-3 fade-in">Teaching</p>
+      <h1 class="heading-xl text-white fade-in">Teaching</h1>
+    </div>
+  </section>
+
+  <!-- Philosophy Quote -->
+  <section class="section-gradient-warm py-16 md:py-20">
+    <div class="container max-w-2xl text-center">
+      <blockquote class="pull-quote text-center border-l-0 pl-0 fade-in" style="border:none;">
+        "In my heart I am a teacher, and my creative work is my research."
+      </blockquote>
+      <p class="text-ash mt-6 leading-relaxed fade-in">
+        With 8 years of teaching at Royal Holloway and 17+ years prior experience in the digital marketing industry, Christopher brings real-world industry knowledge to the classroom. His teaching sits at the intersection of creative practice and emerging technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- Courses — with colored badges per level -->
+  <section class="section-white py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Courses" subtitle="Modules taught at Royal Holloway, University of London." />
+
+      <div class="grid gap-6 md:grid-cols-2 stagger">
+        <div class="card border-t-gold fade-in">
+          <span class="badge mb-4">Undergraduate</span>
+          <h3 class="heading-md mb-2">Creative Social Media</h3>
+          <p class="text-ash text-sm">The first 22-week Creative Social Media module in the UK. A second-year undergraduate module exploring creative practice in digital and social media spaces.</p>
+        </div>
+        <div class="card border-t-cassie fade-in">
+          <span class="badge-cassie mb-4">Postgraduate</span>
+          <h3 class="heading-md mb-2">MA Playwrighting</h3>
+          <p class="text-ash text-sm">Advanced creative writing for performance, exploring traditional and emerging forms.</p>
+        </div>
+        <div class="card border-t-holidays fade-in">
+          <span class="badge-holidays mb-4">Undergraduate</span>
+          <h3 class="heading-md mb-2">Creativity &amp; Entrepreneurship</h3>
+          <p class="text-ash text-sm">Bridging creative practice with entrepreneurial thinking in the creative industries.</p>
+        </div>
+        <div class="card border-t-rathband fade-in">
+          <span class="badge-rathband mb-4">Industry</span>
+          <h3 class="heading-md mb-2">Digital Marketing</h3>
+          <p class="text-ash text-sm">Drawing on 17+ years of industry experience to teach practical digital marketing strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching Innovation — with image -->
+  <section class="section-parchment py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Teaching Innovation" subtitle="Creating 'play spaces' between humans and AI." />
+
+      <!-- Image row -->
+      <div class="grid grid-cols-2 gap-3 mb-12">
+        <div class="rounded-lg overflow-hidden aspect-video">
+          <img src="/images/chris-speaking.jpg" alt="Christopher in the classroom" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-lg overflow-hidden aspect-video">
+          <img src="/images/chris-tedx.jpg" alt="Christopher at TEDx" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2 stagger">
+        <div class="card border-l-gold fade-in">
+          <h3 class="heading-md mb-3">From DALI to DALL:E</h3>
+          <p class="text-ash leading-relaxed">
+            Recreating a 1960s Surrealist "Happening" using generative AI to help students understand the impact of industrialised creativity on performance. Presented at the Cambridge Gen AI in Education Conference.
+          </p>
+        </div>
+        <div class="card border-l-rathband fade-in">
+          <h3 class="heading-md mb-3">The Frankenstein Exercise</h3>
+          <p class="text-ash leading-relaxed">
+            Using performance-based exercises to demystify AI for students, helping them understand both the capabilities and limitations of generative AI through creative practice rather than theory.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

@@ -1,0 +1,170 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SubstackFeed from '../components/SubstackFeed.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<BaseLayout title="Christopher Hogg | Creative Technologist, Educator, Playwright">
+
+  <!-- HERO: Full-bleed image background with overlay -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0 z-0">
+      <img src="/images/chris-tedx.jpg" alt="" class="w-full h-full object-cover object-[70%_20%]" loading="eager" aria-hidden="true" />
+      <div class="absolute inset-0 bg-gradient-to-b from-[#111110]/70 via-[#111110]/50 to-[#111110]/90"></div>
+    </div>
+    <!-- Decorative elements -->
+    <div class="deco-circle w-[500px] h-[500px] -top-40 -right-40 absolute z-[1] animate-shimmer"></div>
+    <div class="deco-dots top-20 left-10 absolute z-[1] opacity-30"></div>
+
+    <div class="container text-center relative z-10 py-24 md:py-32">
+      <p class="label text-gold mb-6 fade-in">Creative Technologist &middot; Educator &middot; Playwright</p>
+      <h1 class="font-display text-white text-[clamp(3rem,9vw,7rem)] leading-[0.95] tracking-[-0.03em] mb-8 fade-in">
+        Christopher<br />Hogg
+      </h1>
+      <p class="text-[#a09890] text-base md:text-lg max-w-lg mx-auto leading-relaxed fade-in">
+        Exploring how AI changes the way we create, learn, and tell stories.
+      </p>
+    </div>
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 scroll-indicator z-10">
+      <svg width="20" height="28" viewBox="0 0 20 28" fill="none" class="text-white/30">
+        <rect x="1" y="1" width="18" height="26" rx="9" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="10" cy="8" r="2" fill="currentColor"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- VISUAL MOSAIC: Full-bleed bento grid -->
+  <section class="section-paper py-2 md:py-3">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-1.5 md:gap-2 px-1.5 md:px-3 stagger">
+      <!-- 9 Holidays / Toys -->
+      <a href="/projects/9-holidays" class="image-card row-span-2 fade-in">
+        <img src="/images/9-holidays-toys.jpg" alt="9 Holidays I Wish I Had Never Been On" loading="eager" />
+        <div class="overlay">
+          <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-[#D4760A]">Memoir</span>
+          <span class="font-display text-sm text-white">9 Holidays</span>
+        </div>
+      </a>
+
+      <!-- Rathband Portrait -->
+      <a href="/projects/rathband" class="image-card row-span-2 fade-in">
+        <img src="/images/rathband-portrait.png" alt="PC David Rathband" loading="eager" />
+        <div class="overlay">
+          <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-[#c49a3c]">BBC Podcast of the Year</span>
+          <span class="font-display text-sm text-white">Rathband</span>
+        </div>
+      </a>
+
+      <!-- Cassie & Corey -->
+      <a href="/projects/cassie-and-corey" class="image-card fade-in">
+        <img src="/images/cassie-corey.jpg" alt="Cassie & Corey" loading="eager" />
+        <div class="overlay">
+          <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-[#7B2D8B]">Podcast Musical</span>
+          <span class="font-display text-sm text-white">Cassie & Corey</span>
+        </div>
+      </a>
+
+      <!-- Il Letto -->
+      <a href="/projects/il-letto" class="image-card fade-in">
+        <img src="/images/il-letto.jpg" alt="Il Letto" loading="eager" />
+        <div class="overlay">
+          <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-[#6B1D3A]">Opera</span>
+          <span class="font-display text-sm text-white">Il Letto</span>
+        </div>
+      </a>
+
+      <!-- Chris Speaking -->
+      <a href="/about" class="image-card fade-in">
+        <img src="/images/chris-speaking.jpg" alt="Christopher Hogg speaking" loading="lazy" />
+        <div class="overlay">
+          <span class="font-display text-sm text-white">Speaker & Educator</span>
+        </div>
+      </a>
+
+      <!-- Chris Presenting -->
+      <a href="/media" class="image-card fade-in">
+        <img src="/images/chris-presenting.jpg" alt="Christopher Hogg presenting" loading="lazy" />
+        <div class="overlay">
+          <span class="font-display text-sm text-white">Talks & Events</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section-gradient-warm py-20 md:py-28">
+    <div class="container max-w-3xl text-center">
+      <p class="pull-quote text-center border-l-0 pl-0 fade-in" style="border:none;">
+        "In my heart I am a teacher, and my creative work is my research."
+      </p>
+      <p class="text-ash mt-8 leading-relaxed fade-in">
+        Lecturer in Creative Digital & Social Media at
+        <strong class="text-graphite">Royal Holloway, University of London</strong>.
+        Connected to <strong class="text-graphite">StoryFutures</strong> and the
+        <strong class="text-graphite">CoSTAR National Lab</strong> for Creative Technologies.
+        Based in Brighton.
+      </p>
+    </div>
+  </section>
+
+  <!-- RECENT HIGHLIGHTS — colored top borders per category -->
+  <section class="section-white py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Recent" subtitle="Talks, publications, and new work." />
+
+      <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4 stagger">
+        <div class="card border-t-gold fade-in">
+          <span class="badge mb-4">Jan 2026</span>
+          <h3 class="heading-sm mb-2">India University Tour</h3>
+          <p class="text-ash text-sm">"How to Protect your Imagination in the Age of Industrial Creativity". Talks at universities in Bangalore and Mumbai.</p>
+        </div>
+        <div class="card border-t-ember fade-in">
+          <span class="badge mb-4">May 2025</span>
+          <h3 class="heading-sm mb-2">Times Higher Education</h3>
+          <p class="text-ash text-sm">"What I learned when students walked out of my AI class". A widely-read article on AI and education.</p>
+        </div>
+        <div class="card border-t-rathband fade-in">
+          <span class="badge mb-4">Oct 2024</span>
+          <h3 class="heading-sm mb-2">Cambridge Conference</h3>
+          <p class="text-ash text-sm">"Replacing Dali with DALL:E". Recreating a 1960s 'Happening' to understand industrialised creativity.</p>
+        </div>
+        <div class="card border-t-cassie fade-in">
+          <span class="badge mb-4">2026–2029</span>
+          <h3 class="heading-sm mb-2">MOOC Development</h3>
+          <p class="text-ash text-sm">Creating "Narrative Foundations for Immersive Media and Video Games". A massive open online course.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST WRITING (Substack) -->
+  <section class="section-parchment py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Latest Writing" subtitle="From Substack." />
+      <SubstackFeed />
+      <div class="mt-10 text-center">
+        <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          Read more on Substack &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA — rich gradient instead of flat dark -->
+  <section class="section-gradient-creative grain py-24 md:py-32 relative">
+    <!-- Decorative circles -->
+    <div class="deco-circle w-[300px] h-[300px] -bottom-20 -left-20 absolute animate-shimmer"></div>
+    <div class="deco-circle w-[200px] h-[200px] top-10 right-20 absolute animate-shimmer" style="animation-delay: 2s;"></div>
+    <div class="container text-center">
+      <p class="font-signature text-4xl md:text-5xl text-white mb-4 fade-in">Let's work together</p>
+      <p class="text-fossil max-w-md mx-auto mb-10 fade-in">
+        Interested in commissioning work, collaborating on research, or inviting Christopher to speak?
+      </p>
+      <a href="/contact" class="btn btn-primary fade-in">
+        Get in Touch
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>

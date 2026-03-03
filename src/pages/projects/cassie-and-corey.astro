@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SpotifyEmbed from '../../components/SpotifyEmbed.astro';
+---
+
+<BaseLayout title="Cassie & Corey | Christopher Hogg" description="A drum & bass musical about eating disorders. Silver & Bronze at British Podcast Awards. Used in 231 schools.">
+
+  <!-- Hero Image -->
+  <div class="w-full">
+    <img src="/images/cassie-corey.jpg" alt="Cassie & Corey" class="hero-image" loading="eager" />
+  </div>
+
+  <section class="section-paper py-16 md:py-24">
+    <div class="container max-w-3xl">
+      <a href="/projects" class="label text-gold hover:text-graphite transition-colors mb-8 inline-block">&larr; All Projects</a>
+
+      <div class="accent-line mb-6" style="background-color: var(--color-cassie);"></div>
+      <span class="badge-cassie mb-4">British Podcast Awards — Silver &amp; Bronze</span>
+      <h1 class="heading-lg mt-4 mb-6">Cassie &amp; Corey: A Drum &amp; Bass Musical about Eating Disorders</h1>
+
+      <div class="flex flex-wrap gap-2 mb-10">
+        <span class="badge-outline">Musical</span>
+        <span class="badge-outline">Arts Council England</span>
+        <span class="badge-outline">NHS Maudsley</span>
+        <span class="badge-outline">Education</span>
+      </div>
+
+      <div class="space-y-6 text-graphite leading-relaxed">
+        <p class="text-lg font-light">
+          A podcast musical for smartphones about eating disorders, created in collaboration with the <strong>NHS Eating Disorder Unit at the Maudsley Hospital</strong> and South London all-girl Drum'n'Bass crew <strong>Girls Take Action (GTA)</strong>.
+        </p>
+
+        <p>
+          Funded by <strong>Arts Council England</strong>, Cassie &amp; Corey won Silver and Bronze at the British Podcast Awards for Drama and Wellbeing. It reached #1 on iTunes and has been used as a free PSHE resource in 231 schools nationwide.
+        </p>
+
+        <h3 class="heading-md mt-12 mb-4">Research Questions</h3>
+        <ul class="space-y-2 text-ash list-disc pl-5">
+          <li>What are the benefits of intimacy at scale offered by podcasting?</li>
+          <li>How can we reach hard-to-reach young audiences with difficult subjects?</li>
+          <li>Can new podcast formats create safer spaces for talking about eating disorders?</li>
+        </ul>
+
+        <h3 class="heading-md mt-12 mb-4">Impact</h3>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 my-6 stagger">
+          <div class="stat-card fade-in" style="--stat-bg: #7B2D8B; --stat-bg-end: #5a2066;">
+            <p class="stat-number">231</p>
+            <p class="stat-label">Schools</p>
+          </div>
+          <div class="stat-card fade-in" style="--stat-bg: #7B2D8B; --stat-bg-end: #5a2066;">
+            <p class="stat-number">11k</p>
+            <p class="stat-label">Listens</p>
+          </div>
+          <div class="stat-card fade-in" style="--stat-bg: #7B2D8B; --stat-bg-end: #5a2066;">
+            <p class="stat-number">700</p>
+            <p class="stat-label">Teens Reached Live</p>
+          </div>
+          <div class="stat-card fade-in" style="--stat-bg: #7B2D8B; --stat-bg-end: #5a2066;">
+            <p class="stat-number">5</p>
+            <p class="stat-label">LEAs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spotify Embed — with project color -->
+      <div class="mt-14">
+        <h3 class="heading-md mb-4">Listen</h3>
+        <SpotifyEmbed uri="show/5NClcKoWzE5lRcGKeDsKIJ" title="Cassie & Corey Podcast" accentColor="#7B2D8B" />
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

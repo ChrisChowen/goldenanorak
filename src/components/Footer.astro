@@ -1,0 +1,60 @@
+---
+const socialLinks = [
+  { href: 'https://www.linkedin.com/in/chrishogg', label: 'LinkedIn', hoverClass: 'hover-linkedin' },
+  { href: 'https://christopherhogg.substack.com', label: 'Substack', hoverClass: 'hover-substack' },
+  { href: 'https://open.spotify.com', label: 'Spotify', hoverClass: 'hover-spotify' },
+  { href: 'https://www.instagram.com/goldenanorak', label: 'Instagram', hoverClass: 'hover-instagram' },
+  { href: 'https://x.com/goldenanorak', label: 'X', hoverClass: 'hover-twitter' },
+];
+
+const year = new Date().getFullYear();
+---
+
+<footer class="section-dark grain">
+  <!-- Subscribe -->
+  <div class="container pt-20 pb-14 text-center">
+    <p class="label text-gold mb-4">Newsletter</p>
+    <p class="font-display text-2xl md:text-3xl text-white mb-2">Stay in the loop</p>
+    <p class="text-fossil text-sm mb-8 max-w-md mx-auto">
+      Writing on AI, creativity, education, and memoir.
+    </p>
+    <!-- Styled Substack embed container — fixes the white box problem -->
+    <div class="substack-embed-container">
+      <iframe
+        src="https://christopherhogg.substack.com/embed"
+        width="100%"
+        height="150"
+        style="border:none; background:transparent; margin: 0; padding: 0;"
+        frameborder="0"
+        scrolling="no"
+        loading="lazy"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Social & Copyright -->
+  <div class="container pb-12">
+    <div class="divider-dark mb-8"></div>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-5 flex-wrap justify-center">
+        {socialLinks.map((link) => (
+          <a
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class:list={[
+              "font-mono text-[0.68rem] uppercase tracking-[0.1em] text-fossil transition-colors px-2 py-1 rounded border border-transparent",
+              link.hoverClass
+            ]}
+            aria-label={link.label}
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+      <p class="font-mono text-[0.65rem] uppercase tracking-[0.1em] text-fossil/60">
+        &copy; {year} Christopher Hogg
+      </p>
+    </div>
+  </div>
+</footer>

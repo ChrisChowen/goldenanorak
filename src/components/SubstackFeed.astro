@@ -1,0 +1,57 @@
+---
+import { XMLParser } from 'fast-xml-parser';
+
+interface FeedItem {
+  title: string;
+  link: string;
+  description: string;
+  pubDate: string;
+}
+
+let items: FeedItem[] = [];
+
+try {
+  const response = await fetch('https://christopherhogg.substack.com/feed');
+  const xml = await response.text();
+  const parser = new XMLParser({
+    ignoreAttributes: false,
+    attributeNamePrefix: '@_',
+  });
+  const feed = parser.parse(xml);
+  const rawItems = feed.rss?.channel?.item || [];
+  items = (Array.isArray(rawItems) ? rawItems : [rawItems]).slice(0, 3).map((item: any) => ({
+    title: item.title || '',
+    link: item.link || '',
+    description: (item.description || '').replace(/<[^>]*>/g, '').slice(0, 200) + '...',
+    pubDate: item.pubDate || '',
+  }));
+} catch (e) {
+  // Feed fetch failed - will show fallback
+}
+---
+
+<section>
+  {items.length > 0 ? (
+    <div class="grid gap-6 md:grid-cols-3 stagger">
+      {items.map((item) => (
+        <a href={item.link} target="_blank" rel="noopener noreferrer" class="card group block fade-in">
+          <time class="label text-gold">
+            {new Date(item.pubDate).toLocaleDateString('en-GB', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+          <h4 class="heading-sm mt-3 mb-3 group-hover:text-gold transition-colors">
+            {item.title}
+          </h4>
+          <p class="text-ash text-sm leading-relaxed">{item.description}</p>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <p class="text-ash text-center">
+      Latest posts from <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener noreferrer">Substack</a>.
+    </p>
+  )}
+</section>

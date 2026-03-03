@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speaking — Christopher Hogg</title>
+  <meta name="description" content="Public talks on AI, creativity, education, and storytelling. Available for conferences, universities, and corporate events.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .page-intro {
+      padding: var(--space-3xl) 0 var(--space-2xl);
+    }
+    @media (min-width: 768px) {
+      .page-intro { padding: 6rem 0 var(--space-2xl); }
+    }
+
+    /* Talk card */
+    .talk {
+      padding: var(--space-xl) 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+    }
+
+    @media (min-width: 768px) {
+      .talk {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-2xl);
+      }
+    }
+
+    .talk__meta-col {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .talk__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.25;
+      margin-bottom: var(--space-sm);
+      font-variation-settings: 'SOFT' 0, 'WONK' 1;
+    }
+
+    .talk__desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      max-width: 34em;
+    }
+
+    .talk__detail {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-tertiary);
+      letter-spacing: 0.04em;
+    }
+
+    .talk__detail strong {
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* Themes grid */
+    .theme-pill {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--rule);
+      border-radius: 3px;
+      color: var(--text-secondary);
+      text-align: center;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .theme-pill:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Booking CTA */
+    .booking-box {
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: var(--space-xl);
+      max-width: 36rem;
+    }
+
+    /* Booking layout responsive */
+    @media (max-width: 767px) {
+      .booking-layout { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Christopher Hogg — Home">
+        <img src="images/signature-logo.jpg" alt="Christopher Hogg">
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="writing.html">Writing</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="speaking.html" class="active">Speaking</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="writing.html">Writing</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="speaking.html" class="active">Speaking</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="header-spacer"></div>
+
+
+  <!-- PAGE INTRO -->
+  <section class="page-intro">
+    <div class="container">
+      <h1 class="fade-up">Speaking</h1>
+      <p class="premise fade-up">
+        Talks for universities, conferences, festivals, and corporate audiences. The subjects are AI and creativity, digital storytelling, education and technology, and what it means to make things in an age of machines.
+      </p>
+      <hr class="rule rule--accent mt-xl fade-up">
+    </div>
+  </section>
+
+
+  <!-- HERO IMAGE -->
+  <section class="container" style="padding-bottom: var(--space-xl);">
+    <figure class="fade-up" style="margin: 0;">
+      <img src="images/chris-tedx-stage.jpg" alt="Christopher Hogg on stage at TEDxUAL" class="img-editorial" style="aspect-ratio: 21/9; object-fit: cover; object-position: center 55%; width: 100%;">
+      <figcaption style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); margin-top: var(--space-sm); letter-spacing: 0.04em;">TEDxUAL — on the red circle</figcaption>
+    </figure>
+  </section>
+
+
+  <!-- THEMES -->
+  <section class="section--compact">
+    <div class="container">
+      <p class="label mb-lg fade-up">Themes</p>
+      <div class="grid-4 stagger" style="gap: var(--space-sm);">
+        <div class="theme-pill fade-up">AI &amp; Creativity</div>
+        <div class="theme-pill fade-up">Digital Storytelling</div>
+        <div class="theme-pill fade-up">Education &amp; Technology</div>
+        <div class="theme-pill fade-up">Trauma &amp; Media</div>
+        <div class="theme-pill fade-up">Practice-based Research</div>
+        <div class="theme-pill fade-up">Memoir &amp; Memory</div>
+        <div class="theme-pill fade-up">Audio &amp; Podcast</div>
+        <div class="theme-pill fade-up">Creative Industries</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SELECTED TALKS -->
+  <section class="section">
+    <div class="container">
+      <p class="label mb-xl fade-up">Selected Appearances</p>
+
+      <div class="talk fade-up">
+        <div>
+          <h3 class="talk__title">How to Protect Your Imagination in the Age of Industrial Creativity</h3>
+          <p class="talk__desc">On what happens when AI enters the creative process&mdash;not as threat narrative, but as a genuine question about human attention, agency, and the will to make something original.</p>
+        </div>
+        <div class="talk__meta-col">
+          <span class="talk__detail"><strong>Venue:</strong> Universities in Bangalore &amp; Mumbai</span>
+          <span class="talk__detail"><strong>Date:</strong> January 2026</span>
+          <span class="talk__detail"><strong>Audience:</strong> University students &amp; faculty</span>
+          <span class="talk__detail"><strong>Format:</strong> Keynote + Q&amp;A</span>
+        </div>
+      </div>
+
+      <div class="talk fade-up">
+        <div>
+          <h3 class="talk__title">Replacing Dal&iacute; with DALL&middot;E</h3>
+          <p class="talk__desc">A live recreation of a 1960s &lsquo;Happening&rsquo; using generative AI, followed by analysis. What do we lose when the collaborator is a machine?</p>
+        </div>
+        <div class="talk__meta-col">
+          <span class="talk__detail"><strong>Venue:</strong> Cambridge Conference on AI &amp; Creativity</span>
+          <span class="talk__detail"><strong>Date:</strong> October 2024</span>
+          <span class="talk__detail"><strong>Audience:</strong> Academic &amp; industry</span>
+          <span class="talk__detail"><strong>Format:</strong> Performance-lecture</span>
+        </div>
+      </div>
+
+      <div class="talk fade-up">
+        <div>
+          <h3 class="talk__title">TEDxUAL: Rathband and the Social Media Tragedy</h3>
+          <p class="talk__desc">How social media turned a crime into a public spectacle, and what that means for how we understand tragedy in the digital age.</p>
+        </div>
+        <div class="talk__meta-col">
+          <span class="talk__detail"><strong>Venue:</strong> TEDxUAL</span>
+          <span class="talk__detail"><strong>Date:</strong> 2017</span>
+          <span class="talk__detail"><strong>Audience:</strong> Public</span>
+          <span class="talk__detail"><strong>Format:</strong> TEDx talk</span>
+        </div>
+      </div>
+
+      <div class="talk fade-up">
+        <div>
+          <h3 class="talk__title">AI in the Classroom: What Actually Works</h3>
+          <p class="talk__desc">Practical, honest approaches to integrating AI into creative and humanities education. What students actually need, what the tools can and cannot do, and how to build a classroom that stays human.</p>
+        </div>
+        <div class="talk__meta-col">
+          <span class="talk__detail"><strong>Venue:</strong> Various universities &amp; conferences</span>
+          <span class="talk__detail"><strong>Date:</strong> Ongoing</span>
+          <span class="talk__detail"><strong>Audience:</strong> Educators &amp; academic staff</span>
+          <span class="talk__detail"><strong>Format:</strong> Workshop</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BOOKING -->
+  <section class="section section--alt">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-2xl);" class="fade-up">
+        <!-- On desktop, side by side -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2xl); align-items: center;" class="booking-layout">
+          <div class="booking-box" style="margin: 0;">
+            <p class="label label--accent mb-md">Book a Talk</p>
+            <h3 style="margin-bottom: var(--space-md);">Available for conferences, universities, festivals, and corporate events.</h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: var(--space-lg); max-width: 30em;">
+              Talks can be adapted for academic, public, or industry audiences. Keynotes, panel contributions, workshops, and performance-lectures.
+            </p>
+            <a href="contact.html" class="btn btn--primary">Get in touch</a>
+          </div>
+          <figure style="margin: 0;">
+            <img src="images/chris-speaking.jpg" alt="Christopher Hogg speaking" class="img-editorial" style="aspect-ratio: 4/3; border-radius: 3px;">
+            <figcaption style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); margin-top: var(--space-sm); letter-spacing: 0.04em;">Speaking at university event</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" style="display: inline-block; margin-bottom: var(--space-md);">
+            <img src="images/signature-logo.jpg" alt="Christopher Hogg" style="height: 1.8rem; width: auto; filter: invert(1) brightness(0.8);">
+          </a>
+          <p style="font-size: 0.88rem; color: var(--text-tertiary); max-width: 24em; line-height: 1.7;">
+            Writer, educator, and creative technologist. Lecturer at Royal Holloway, University of London.
+          </p>
+        </div>
+        <div>
+          <p class="label" style="color: var(--text-tertiary); margin-bottom: var(--space-md);">Elsewhere</p>
+          <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+            <a href="https://www.linkedin.com/in/christopherhogg1/" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">LinkedIn</a>
+            <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Substack</a>
+            <a href="https://www.instagram.com/goldenanorak" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Instagram</a>
+            <a href="https://x.com/goldenanorak" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">X / Twitter</a>
+            <a href="https://open.spotify.com/show/43XCZFTyK1dF0DmAMzghWY" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Spotify</a>
+          </div>
+        </div>
+        <div>
+          <p class="label" style="color: var(--text-tertiary); margin-bottom: var(--space-md);">Subscribe</p>
+          <p style="font-size: 0.82rem; color: var(--text-tertiary); max-width: 20em; line-height: 1.6; margin-bottom: var(--space-md);">
+            New writing on AI, creativity, education, and memoir. Delivered occasionally, never aggressively.
+          </p>
+          <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="btn btn--outline" style="border-color: var(--rule-dark); color: var(--text-tertiary);">
+            Read on Substack
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); letter-spacing: 0.04em;">
+          &copy; 2026 Christopher Hogg
+        </p>
+        <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); letter-spacing: 0.04em;">
+          Built with restraint.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuBtn.classList.toggle('open', isOpen);
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    const observer = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+    );
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+---
+
+<BaseLayout title="About | Christopher Hogg" description="Biography, affiliations, and background of Christopher Hogg — creative technologist, educator, and playwright.">
+
+  <!-- Hero Banner with headshot -->
+  <section class="hero-banner" style="min-height: 50vh;">
+    <div class="hero-banner-bg">
+      <img src="/images/chris-headshot.jpg" alt="" loading="eager" aria-hidden="true" style="object-position: 70% 20%;" />
+    </div>
+    <div class="container">
+      <p class="label text-gold mb-3 fade-in">About</p>
+      <h1 class="heading-xl text-white fade-in">Christopher Hogg</h1>
+      <p class="text-[#a09890] text-lg mt-4 max-w-xl fade-in">Creative technologist, educator, and award-winning playwright exploring how AI changes the way we create, learn, and tell stories.</p>
+    </div>
+  </section>
+
+  <!-- Bio -->
+  <section class="section-paper py-16 md:py-24">
+    <div class="container">
+      <div class="grid gap-12 lg:grid-cols-3">
+        <!-- Photo Column -->
+        <div class="lg:col-span-1 fade-in">
+          <div class="rounded-lg overflow-hidden mb-6 shadow-lg">
+            <img src="/images/chris-speaking.jpg" alt="Christopher Hogg speaking" class="w-full aspect-[3/4] object-cover" loading="eager" />
+          </div>
+          <div class="space-y-3">
+            <a href="#" class="btn btn-dark w-full justify-center">
+              Download CV
+            </a>
+            <a href="#" class="btn btn-outline w-full justify-center">
+              Download Press Photo
+            </a>
+          </div>
+        </div>
+
+        <!-- Bio Column -->
+        <div class="lg:col-span-2">
+          <div class="space-y-5 text-graphite leading-relaxed">
+            <p class="text-lg font-light">
+              Christopher Hogg is a <strong class="font-medium">creative technologist, educator, and award-winning playwright</strong> exploring how AI changes the way we create, learn, and tell stories.
+            </p>
+
+            <p>
+              He is a <strong>Lecturer in Creative Digital &amp; Social Media</strong> in the Department of Media Arts at <strong>Royal Holloway, University of London</strong>, and is connected to the <strong>StoryFutures / CoSTAR National Lab</strong> for Creative Technologies. He is based in Brighton.
+            </p>
+
+            <p>
+              With 8 years of teaching at Royal Holloway and 17+ years prior experience in the digital marketing industry, Christopher's work sits at the intersection of new writing and emerging technologies. His creative projects, from BBC award-winning podcast drama to a 425-page memoir exploring AI and trauma, pioneer new forms of storytelling for digital audiences.
+            </p>
+
+            <p>
+              His most recent public work explores how AI is reshaping human creativity, how students perceive their own intelligence relative to AI, and how assessment in higher education must evolve. His articles in <strong>Times Higher Education</strong> and <strong>Wonkhe</strong> have generated significant discussion across the sector.
+            </p>
+
+            <p class="text-ash italic">
+              He also writes about men in trouble, because he is one.
+            </p>
+          </div>
+
+          <!-- Affiliations — with colored left borders -->
+          <div class="mt-14">
+            <h3 class="heading-md mb-6">Affiliations</h3>
+            <div class="grid gap-4 sm:grid-cols-2 stagger">
+              <div class="card border-l-gold fade-in">
+                <h4 class="heading-sm mb-1">Royal Holloway</h4>
+                <p class="text-ash text-sm">University of London, Department of Media Arts</p>
+              </div>
+              <div class="card border-l-rathband fade-in">
+                <h4 class="heading-sm mb-1">StoryFutures</h4>
+                <p class="text-ash text-sm">National Centre for Immersive Storytelling</p>
+              </div>
+              <div class="card border-l-cassie fade-in">
+                <h4 class="heading-sm mb-1">CoSTAR</h4>
+                <p class="text-ash text-sm">National Lab for Creative Technologies</p>
+              </div>
+              <div class="card border-l-holidays fade-in">
+                <h4 class="heading-sm mb-1">Goldenanorak</h4>
+                <p class="text-ash text-sm">London-based comedy writing group (est. 2007)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education — timeline style -->
+          <div class="mt-14">
+            <h3 class="heading-md mb-6">Education</h3>
+            <div class="space-y-6">
+              <div class="timeline-item fade-in">
+                <h4 class="heading-sm mb-1">MA Writing For Performance</h4>
+                <p class="text-ash text-sm">Goldsmiths College, University of London. Distinction (2014)</p>
+              </div>
+              <div class="timeline-item fade-in">
+                <h4 class="heading-sm mb-1">PhD Research (in progress)</h4>
+                <p class="text-ash text-sm">Goldsmiths College. British Comedy and Its Value to the British Economy</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional image strip -->
+  <section class="section-parchment py-12">
+    <div class="container">
+      <div class="grid grid-cols-3 gap-3">
+        <div class="rounded-lg overflow-hidden aspect-video">
+          <img src="/images/chris-presenting.jpg" alt="Christopher presenting" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-lg overflow-hidden aspect-video">
+          <img src="/images/chris-tedx.jpg" alt="Christopher at TEDxUAL" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="rounded-lg overflow-hidden aspect-video">
+          <img src="/images/rathband-play.jpg" alt="Rathband artwork" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

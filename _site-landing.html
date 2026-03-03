@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Christopher Hogg — Site Preview</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .container {
+      max-width: 640px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+    .subtitle {
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 3rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 500px) {
+      .cards { grid-template-columns: 1fr; }
+    }
+    a.card {
+      display: block;
+      padding: 2rem 1.5rem;
+      border: 1px solid #333;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #e0e0e0;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    a.card:hover {
+      border-color: #D72638;
+      transform: translateY(-2px);
+    }
+    .card__label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #666;
+      margin-bottom: 0.75rem;
+    }
+    .card__title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+    .card__desc {
+      font-size: 0.8rem;
+      color: #888;
+      line-height: 1.5;
+    }
+    .card--new .card__label { color: #D72638; }
+    .footer {
+      font-size: 0.7rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Christopher Hogg</h1>
+    <p class="subtitle">Portfolio site — two design directions</p>
+
+    <div class="cards">
+      <a href="current/" class="card">
+        <p class="card__label">Version 1</p>
+        <p class="card__title">Current Site</p>
+        <p class="card__desc">Astro + Tailwind. The existing design as deployed on christopherhogg.net.</p>
+      </a>
+      <a href="new/" class="card card--new">
+        <p class="card__label">Version 2</p>
+        <p class="card__title">New Design</p>
+        <p class="card__desc">Bolder typography, editorial layout, richer imagery. Static HTML + CSS.</p>
+      </a>
+    </div>
+
+    <p class="footer">Private preview — not for distribution</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Christopher Hogg</title>
+  <meta name="description" content="Essays, publications, and Substack writing on AI, creativity, education, and memoir.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .page-intro {
+      padding: var(--space-3xl) 0 var(--space-2xl);
+    }
+    @media (min-width: 768px) {
+      .page-intro { padding: 6rem 0 var(--space-2xl); }
+    }
+
+    /* Thematic clusters */
+    .cluster {
+      padding: var(--space-2xl) 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .cluster__label {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: var(--space-xl);
+    }
+
+    .writing-entry {
+      padding: var(--space-lg) 0;
+      border-bottom: 1px solid var(--rule-light);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xs);
+    }
+
+    @media (min-width: 768px) {
+      .writing-entry {
+        grid-template-columns: 7rem 1fr auto;
+        gap: var(--space-lg);
+        align-items: baseline;
+      }
+    }
+
+    /* Writing entries with thumbnails (desktop only) */
+    @media (min-width: 768px) {
+      .writing-entry--has-thumb {
+        grid-template-columns: 60px 7rem 1fr auto;
+        align-items: center;
+      }
+    }
+
+    .writing-entry:last-child { border-bottom: none; }
+
+    .writing-entry__date {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-tertiary);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .writing-entry__title {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.35;
+      text-decoration: none;
+      font-variation-settings: 'SOFT' 0, 'WONK' 1;
+    }
+
+    .writing-entry__title:hover {
+      color: var(--accent);
+    }
+
+    .writing-entry__source {
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+    }
+
+    /* Featured writing section */
+    .writing-featured-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+
+    .writing-featured-link {
+      text-decoration: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-xl);
+    }
+
+    .writing-featured-link:hover .writing-featured-title {
+      color: var(--accent);
+    }
+
+    .writing-featured-title {
+      margin: var(--space-sm) 0 var(--space-md);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 300;
+      color: var(--text);
+      transition: color 0.25s ease;
+    }
+
+    /* Thumbnails in writing entries */
+    .writing-thumb {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 3px;
+      filter: grayscale(8%);
+    }
+
+    /* Responsive: stack featured grid + hide thumbnails on mobile */
+    @media (max-width: 767px) {
+      .writing-featured-grid { grid-template-columns: 1fr !important; }
+      .writing-thumb { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo" aria-label="Christopher Hogg — Home">
+        <img src="images/signature-logo.jpg" alt="Christopher Hogg">
+      </a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="writing.html" class="active">Writing</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="writing.html" class="active">Writing</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="speaking.html">Speaking</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div class="header-spacer"></div>
+
+
+  <!-- ========== PAGE INTRO ========== -->
+  <section class="page-intro">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr; gap: var(--space-2xl); align-items: end;">
+        <div>
+          <h1 class="fade-up">Writing</h1>
+          <p class="premise fade-up">
+            Essays, articles, public arguments, and serialised memoir. The writing moves between AI and education, creativity and technology, personal history and public debate.
+          </p>
+          <hr class="rule rule--accent mt-xl fade-up">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HERO IMAGE -->
+  <section class="container" style="padding-bottom: var(--space-xl);">
+    <figure class="fade-up" style="margin: 0;">
+      <img src="images/chris-writing-bw.jpg" alt="Christopher Hogg writing" class="img-editorial" style="aspect-ratio: 4/3; object-fit: cover; object-position: center center; width: 100%; max-width: 40rem;">
+      <figcaption style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); margin-top: var(--space-sm); letter-spacing: 0.04em;">Writing &mdash; always starts with a pen</figcaption>
+    </figure>
+  </section>
+
+
+  <!-- ========== FEATURED WRITING ========== -->
+  <section class="section">
+    <div class="container">
+      <p class="label label--accent mb-lg fade-up">Featured</p>
+      <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="writing-featured-link fade-up">
+        <div class="writing-featured-grid">
+          <div>
+            <img src="images/9-holidays-toys.jpg" alt="9 Holidays I Wish I Had Never Been On" class="img-editorial" style="aspect-ratio: 4/3; border-radius: 3px;">
+          </div>
+          <div>
+            <span style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); letter-spacing: 0.04em; text-transform: uppercase;">Serialised memoir &middot; Ongoing</span>
+            <h2 class="writing-featured-title">9 Holidays I Wish I Had Never Been On</h2>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.65; max-width: 28em;">A memoir, an archive, and a test of what happens when trauma meets synthetic memory. Serialised on Substack. Each chapter reconstructs a family holiday that shaped — and damaged — a life.</p>
+            <span class="btn btn--ghost" style="margin-top: var(--space-md); display: inline-flex;">Read on Substack</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ========== AI & EDUCATION ========== -->
+  <section class="container">
+    <div class="cluster">
+      <p class="cluster__label fade-up">AI &amp; Education</p>
+
+      <div class="writing-entry fade-up">
+        <span class="writing-entry__date">Jan 2026</span>
+        <a href="speaking.html" class="writing-entry__title">How to Protect Your Imagination in the Age of Industrial Creativity</a>
+        <span class="writing-entry__source">University lecture &middot; India tour</span>
+      </div>
+
+      <div class="writing-entry fade-up">
+        <span class="writing-entry__date">Nov 2024</span>
+        <a href="https://wonkhe.com/blogs/dear-students-here-is-what-ai-cannot-replace/" target="_blank" rel="noopener" class="writing-entry__title">Dear students: here is what AI cannot replace</a>
+        <span class="writing-entry__source">Wonkhe</span>
+      </div>
+
+      <div class="writing-entry fade-up">
+        <span class="writing-entry__date">Oct 2024</span>
+        <a href="speaking.html" class="writing-entry__title">Replacing Dal&iacute; with DALL&middot;E: Recreating a Happening</a>
+        <span class="writing-entry__source">Cambridge Conference</span>
+      </div>
+
+      <div class="writing-entry fade-up">
+        <span class="writing-entry__date">May 2025</span>
+        <a href="https://www.timeshighereducation.com/campus/what-i-learned-when-students-walked-out-my-ai-class" target="_blank" rel="noopener" class="writing-entry__title">What I Learned When Students Walked Out of My AI Class</a>
+        <span class="writing-entry__source">Times Higher Education</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== MEMOIR ========== -->
+  <section class="container">
+    <div class="cluster">
+      <p class="cluster__label fade-up">Memoir</p>
+
+      <div class="writing-entry fade-up">
+        <span class="writing-entry__date">Ongoing</span>
+        <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="writing-entry__title">9 Holidays I Wish I Had Never Been On</a>
+        <span class="writing-entry__source">Substack (serialised)</span>
+      </div>
+
+      <div class="writing-entry fade-up">
+        <span class="writing-entry__date">2024</span>
+        <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="writing-entry__title">The Last Supper: A Scene</a>
+        <span class="writing-entry__source">Substack</span>
+      </div>
+
+      <div class="writing-entry fade-up">
+        <span class="writing-entry__date">2024</span>
+        <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="writing-entry__title">Night Terrors in Magaluf</a>
+        <span class="writing-entry__source">Substack</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CREATIVE PRACTICE & RESEARCH ========== -->
+  <section class="container">
+    <div class="cluster">
+      <p class="cluster__label fade-up">Creative Practice &amp; Research</p>
+
+      <div class="writing-entry writing-entry--has-thumb fade-up">
+        <img src="images/rathband-hero.jpg" alt="" class="writing-thumb">
+        <span class="writing-entry__date">2017</span>
+        <a href="rathband.html" class="writing-entry__title">Social Media as Tragic Machinery: The Rathband Case</a>
+        <span class="writing-entry__source">Practice-based research</span>
+      </div>
+
+      <div class="writing-entry writing-entry--has-thumb fade-up">
+        <img src="images/cassie-corey.jpg" alt="" class="writing-thumb">
+        <span class="writing-entry__date">2019</span>
+        <a href="work.html#cassie" class="writing-entry__title">Designing Audio Drama for the Smartphone Generation</a>
+        <span class="writing-entry__source">Research output</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== SUBSTACK CTA ========== -->
+  <section class="section section--alt">
+    <div class="container text-center max-w-text">
+      <h2 class="fade-up" style="margin-bottom: var(--space-md);">Subscribe</h2>
+      <p class="fade-up" style="color: var(--text-secondary); margin: 0 auto var(--space-xl); max-width: 28em;">
+        New writing on AI, creativity, education, and memoir. Delivered occasionally, never aggressively.
+      </p>
+      <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="btn btn--primary fade-up">Read on Substack</a>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" style="display: inline-block; margin-bottom: var(--space-md);">
+            <img src="images/signature-logo.jpg" alt="Christopher Hogg" style="height: 1.8rem; width: auto; filter: invert(1) brightness(0.8);">
+          </a>
+          <p style="font-size: 0.88rem; color: var(--text-tertiary); max-width: 24em; line-height: 1.7;">
+            Writer, educator, and creative technologist. Lecturer at Royal Holloway, University of London.
+          </p>
+        </div>
+        <div>
+          <p class="label" style="color: var(--text-tertiary); margin-bottom: var(--space-md);">Elsewhere</p>
+          <div style="display: flex; flex-direction: column; gap: var(--space-sm);">
+            <a href="https://www.linkedin.com/in/christopherhogg1/" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">LinkedIn</a>
+            <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Substack</a>
+            <a href="https://www.instagram.com/goldenanorak" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Instagram</a>
+            <a href="https://x.com/goldenanorak" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">X / Twitter</a>
+            <a href="https://open.spotify.com/show/43XCZFTyK1dF0DmAMzghWY" target="_blank" rel="noopener" style="font-family: var(--font-sans); font-size: 0.82rem;">Spotify</a>
+          </div>
+        </div>
+        <div>
+          <p class="label" style="color: var(--text-tertiary); margin-bottom: var(--space-md);">Subscribe</p>
+          <p style="font-size: 0.82rem; color: var(--text-tertiary); max-width: 20em; line-height: 1.6; margin-bottom: var(--space-md);">
+            New writing on AI, creativity, education, and memoir. Delivered occasionally, never aggressively.
+          </p>
+          <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="btn btn--outline" style="border-color: var(--rule-dark); color: var(--text-tertiary);">
+            Read on Substack
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); letter-spacing: 0.04em;">
+          &copy; 2026 Christopher Hogg
+        </p>
+        <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--text-tertiary); letter-spacing: 0.04em;">
+          Built with restraint.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuBtn.classList.toggle('open', isOpen);
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+    const observer = new IntersectionObserver(
+      (entries) => { entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add('visible'); }); },
+      { threshold: 0.08, rootMargin: '0px 0px -30px 0px' }
+    );
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+  </script>
+
+</body>
+</html>

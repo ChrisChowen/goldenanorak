@@ -1,0 +1,226 @@
+The key design shift
+Your first plan treats the site as a set of pages.
+The better plan is to treat it as a framing device for a practice.
+That means the site needs two things at once:
+	1	Conventional portfolio performance so a hiring panel, programmer, collaborator, journalist, or funder can instantly find the right proof.
+	2	A distinctive mental atmosphere so the visitor feels, within seconds, that Chris is not a generic academic or a generic creative.
+That atmosphere is where Adams / Coupland / Rushkoff help.
+	•	From Adams, borrow playful intelligence and systems-awareness.
+	•	From Coupland, borrow typographic confidence, cultural sharpness, and language-as-design.
+	•	From Rushkoff, borrow humane digital clarity and anti-noise restraint.
+Those are not “themes.” They are operating principles.
+What was making the earlier direction feel generic
+The old architecture becomes bland when it defaults to these moves:
+	•	standard hero + headshot + credentials
+	•	standard academic nav labels
+	•	standard project cards
+	•	standard “research / teaching / writing” separation
+	•	standard institutional tone
+Those things are useful, but if they are the dominant experience, Chris starts to look like everyone else with a university page and a Squarespace portfolio.
+That is especially risky because his current web presence is fragmented already: his site underperforms as a central hub while his institutional and publishing presence carry much of the credibility.
+So don’t throw away the portfolio structure. Instead, embed it inside a more specific editorial system.
+The right model
+I’d redesign the site around this idea:
+Christopher Hogg is a writer-researcher building stories, teaching frameworks, and public arguments about how technology reshapes human creativity.
+That one sentence can hold:
+	•	plays
+	•	podcasts
+	•	memoir
+	•	AI and education writing
+	•	talks
+	•	teaching
+	•	research
+It also matches what the public record already shows: creative practice, AI-in-education/public writing, memoir on Substack, and university-based research/teaching.
+The site structure I’d keep
+Your structure is basically right. I would keep the main categories, but sharpen the naming and hierarchy.
+Instead of:
+Home / Research / Projects / Teaching / Writing / Media / About / Contact
+I’d go with:
+Home / Work / Writing / Teaching / Speaking / About / Contact
+And let Research live inside About and Teaching, unless he needs a dedicated research page for academic audiences.
+Why? Because “Research” as a top-level nav item often pushes a site into generic academic territory. Chris’s work is stronger when framed through outputs and ideas, not just institutional categorisation.
+Then inside Work, split into:
+	•	Creative Work
+	•	Selected Projects
+	•	Research-led Experiments
+That lets Rathband, Cassie & Corey, 9 Holidays, and future AI/creative-tech work sit together without forcing a hard false split.
+How to make it distinct without hurting usability
+This is the important bit.
+The distinctiveness should come from five design layers, not from eccentric layout.
+1. Voice
+This is the biggest missed opportunity in most portfolio sites.
+Chris’s site copy should not sound like university boilerplate. It should sound like someone who:
+	•	understands performance
+	•	has lived experience
+	•	is alert to absurdity
+	•	thinks critically about technology
+	•	can move between seriousness and wit
+That’s where Adams and Coupland are useful: not as references, but as permission to let the site’s microcopy and framing feel authored.
+For example, instead of bland summaries like:
+“This project explores…”
+use lines with angle and compression, like:
+“A podcast musical built for the smartphone, made to speak to teenagers about illness, intimacy, and the difficulty of being seen.”
+Or:
+“A memoir, an archive, and a test of what happens when trauma meets synthetic memory.”
+That gives portfolio clarity, but it feels written by a writer.
+2. Typography
+If you want distinctive without chaos, typography is where to spend the energy.
+I’d use:
+	•	a serious, literary serif for long reading and project intros
+	•	a clean, modern sans for nav, metadata, project stats, labels, captions
+This lets the site switch naturally between:
+	•	playwright
+	•	memoirist
+	•	lecturer
+	•	creative technologist
+That’s far more effective than visual gimmicks.
+3. Metadata as design
+One of the best ways to make a portfolio feel intelligent is to turn information into part of the visual system.
+Every project should have a structured “signal box” near the top:
+	•	Format
+	•	Year
+	•	Collaborators
+	•	Funding / Commission
+	•	Awards
+	•	Audience / Reach
+	•	Research question
+	•	Listen / Read / Watch
+This solves the portfolio problem elegantly. It gives panels and commissioners immediate proof, while also making the page feel more curated and rigorous.
+For Chris, that matters because works like Rathband and 9 Holidays are not just creative outputs; they are also research-bearing artifacts. His Royal Holloway profile and publication record already support that framing.
+4. Editorial pacing
+Don’t make every page a stack of cards.
+Use rhythm:
+	•	large title
+	•	short premise
+	•	metadata block
+	•	one strong visual or audio embed
+	•	a compact essay paragraph
+	•	selected outcomes
+	•	related writing / talks / context
+That makes the site feel more like a curated notebook of major works than a directory.
+5. Controlled strangeness
+This is where the influence comes in.
+You want moments that feel slightly unexpected:
+	•	section labels like Current Signal, Selected Works, Notes from the Edge of Teaching, Fragments
+	•	small dry lines of microcopy
+	•	recurring tags like PLAY / PODCAST / MEMOIR / AI / CLASSROOM / TRAUMA / COMEDY / SYSTEMS
+	•	occasional pull-quotes that work like thought interruptions
+These touches make the site feel authored. But the page architecture remains clean.
+What the homepage should do
+The homepage should not just say “here is Christopher Hogg.”
+It should answer, fast:
+	•	Who is he?
+	•	What kind of work does he make?
+	•	Why does it matter now?
+	•	What proof is there?
+	•	Where do I go next?
+So I’d structure the homepage like this:
+Hero
+Christopher Hogg Writer, educator, and creative technologist exploring how stories, classrooms, and machines shape one another.
+Then one short paragraph with institutional grounding: Royal Holloway / Media Arts / current themes in AI, creativity, storytelling.
+That institutional grounding matters because it immediately upgrades credibility for academic and commissioning audiences. His current university profile and recent Royal Holloway feature make that association important and current.
+Then three blocks
+	•	Featured Work
+	•	Latest Writing / Talks
+	•	Teaching & Research
+Not equal-sized cards — more like an editorial layout with one dominant item and two supporting tracks.
+Then a “selected proof” strip
+For example:
+	•	BBC Podcast of the Year
+	•	Times Higher Education
+	•	Royal Holloway
+	•	Arts Council England
+	•	British Podcast Awards
+	•	StoryFutures / CoSTAR if appropriate
+This is a portfolio move, not a branding move. It says: this practice has recognition and context.
+Then a living feed
+A few recent items:
+	•	latest article
+	•	latest talk
+	•	latest Substack post
+	•	current project
+That helps the site feel alive and current.
+How I’d handle the pages
+Work
+This is the core portfolio page.
+It should not just be a gallery. It should show his practice in categories, maybe:
+	•	Audio & Performance
+	•	Writing & Memoir
+	•	AI / Education / Experimental Practice
+That instantly expresses the shape of his work.
+Writing
+This page should combine:
+	•	essays
+	•	external publications
+	•	selected Substack work
+	•	a few thematic clusters
+This is where his newer AI/public-writing identity becomes visible. His Times Higher Education article and current Substack presence make this a priority, not an extra.
+Teaching
+This should be unusually good.
+Not just courses taught. Show:
+	•	teaching philosophy
+	•	modules
+	•	classroom experiments
+	•	how creative practice informs pedagogy
+	•	selected talks on AI and creativity
+Chris has enough current public material around AI/education that this section can become a differentiator, not a housekeeping page.
+Speaking
+This should be public-facing and bookable:
+	•	talk titles
+	•	themes
+	•	audiences
+	•	selected appearances
+	•	short embedded clips where possible
+This matters because his talks are a bridge between academic, public, and commercial audiences. Recent public traces show this is active and current.
+About
+This should be narrative, not a CV dump. Then include:
+	•	short bio
+	•	long bio
+	•	affiliations
+	•	downloadable CV
+	•	press image
+	•	selected themes
+The design style in one sentence
+Editorial, exact, humane, and slightly disobedient.
+That’s the non-generic version of “clean and modern.”
+Concrete visual system
+If I were art directing this, I’d choose:
+	•	Background: warm white or pale grey, not stark white
+	•	Text: charcoal, not pure black
+	•	Accent: one intelligent synthetic colour — cobalt, signal red, or acid green used sparingly
+	•	Typography: one serif, one sans
+	•	Imagery: sparse, chosen, documentary not decorative
+	•	Motion: almost none, except soft reveals and state changes
+	•	Shapes: mostly rectangular, grid-led, no blob-branding
+	•	Texture: occasional rule lines, metadata dividers, archival captions
+That gives you:
+	•	portfolio seriousness
+	•	literary sharpness
+	•	digital present-tense
+	•	no trend-chasing
+The real lesson from Adams / Coupland / Rushkoff
+Here’s the usable translation:
+	•	Adams says: a site can be intelligent and funny without becoming cute.
+	•	Coupland says: text can be image, category, texture, and mood.
+	•	Rushkoff says: digital design should help a person think, not pressure them to perform.
+Applied to Chris, that becomes:
+	•	make the site witty, not quirky
+	•	make it typographic, not decorative
+	•	make it clear, not corporate
+	•	make it human, not “personal brand”
+	•	make it portfolio-useful, not portfolio-generic
+What I would change in your document
+I would keep most of your research, but revise the design section and page philosophy like this:
+Replace “academic portfolio website” with:
+an authored portfolio platform for a hybrid creative-academic practice
+Replace “best practices” as the dominant frame with:
+best practices as invisible infrastructure and distinctive editorial framing as the visible layer
+Add a principle section:
+	•	The site must work for hiring committees
+	•	The site must work for commissioners/collaborators
+	•	The site must work for readers/listeners/students
+	•	The site must feel unmistakably like Chris Hogg
+	•	The site must avoid both corporate polish and academic blandness
+If you want the shortest possible brief
+Use this:
+Build Chris Hogg a portfolio site that is as usable as a strong academic website, but feels like the public thinking space of a playwright-educator working at the edge of storytelling and AI.

@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+---
+
+<BaseLayout title="Projects | Christopher Hogg" description="Award-winning creative projects by Christopher Hogg: podcast drama, memoir, musical theatre, and opera.">
+
+  <section class="section-paper py-20 md:py-28">
+    <div class="container">
+      <SectionHeader title="Projects" subtitle="Award-winning creative work spanning podcast drama, memoir, musical theatre, and opera — each exploring how technology mediates human experience." />
+
+      <!-- Image grid overview — with project-colored overlays -->
+      <div class="grid gap-3 md:grid-cols-2 mb-16 stagger">
+        <a href="/projects/rathband" class="image-card fade-in" style="aspect-ratio: 16/10;">
+          <img src="/images/rathband-hero.jpg" alt="Rathband: A Digital Tragedy" loading="eager" />
+          <div class="overlay">
+            <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em]" style="color: #8B1A1A;">BBC Podcast of the Year</span>
+            <span class="font-display text-lg text-white">Rathband: A Digital Tragedy</span>
+          </div>
+        </a>
+        <a href="/projects/cassie-and-corey" class="image-card fade-in" style="aspect-ratio: 16/10;">
+          <img src="/images/cassie-corey.jpg" alt="Cassie & Corey" loading="eager" />
+          <div class="overlay">
+            <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em]" style="color: #7B2D8B;">British Podcast Awards</span>
+            <span class="font-display text-lg text-white">Cassie & Corey</span>
+          </div>
+        </a>
+        <a href="/projects/9-holidays" class="image-card fade-in" style="aspect-ratio: 16/10;">
+          <img src="/images/9-holidays-toys.jpg" alt="9 Holidays I Wish I Had Never Been On" loading="lazy" />
+          <div class="overlay">
+            <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em]" style="color: #D4760A;">Memoir</span>
+            <span class="font-display text-lg text-white">9 Holidays</span>
+          </div>
+        </a>
+        <a href="/projects/il-letto" class="image-card fade-in" style="aspect-ratio: 16/10;">
+          <img src="/images/il-letto.jpg" alt="Il Letto" loading="lazy" />
+          <div class="overlay">
+            <span class="font-mono text-[0.6rem] uppercase tracking-[0.14em]" style="color: #6B1D3A;">Opera</span>
+            <span class="font-display text-lg text-white">Il Letto</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Detailed cards — with colored top borders -->
+      <div class="grid gap-6 md:grid-cols-2 stagger">
+        <div class="fade-in">
+          <div class="card border-t-rathband">
+            <span class="badge-rathband mb-3">BBC Podcast of the Year</span>
+            <h3 class="heading-md mb-2">
+              <a href="/projects/rathband" class="text-graphite hover:text-[#8B1A1A] transition-colors">Rathband: A Digital Tragedy</a>
+            </h3>
+            <p class="text-ash text-sm mb-4">A 3-part iTunes podcast for visually impaired listenership exploring how social media mediates trauma, disability, and masculinity. Funded by Arts Council England. #1 on iTunes with 30,000+ downloads.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="badge-outline">Podcast</span>
+              <span class="badge-outline">Arts Council</span>
+              <span class="badge-outline">iTunes #1</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="card border-t-cassie">
+            <span class="badge-cassie mb-3">British Podcast Awards, Silver &amp; Bronze</span>
+            <h3 class="heading-md mb-2">
+              <a href="/projects/cassie-and-corey" class="text-graphite hover:text-[#7B2D8B] transition-colors">Cassie &amp; Corey: A Drum &amp; Bass Musical</a>
+            </h3>
+            <p class="text-ash text-sm mb-4">A podcast musical about eating disorders, created with NHS Eating Disorder Unit at the Maudsley Hospital and South London all-girl D&amp;B crew GTA. Used as a free PSHE resource in 231 schools nationwide.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="badge-outline">Musical</span>
+              <span class="badge-outline">NHS</span>
+              <span class="badge-outline">Education</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="card border-t-holidays">
+            <h3 class="heading-md mb-2">
+              <a href="/projects/9-holidays" class="text-graphite hover:text-[#D4760A] transition-colors">9 Holidays I Wish I Had Never Been On</a>
+            </h3>
+            <p class="text-ash text-sm mb-4">A 425-page memoir exploring domestic violence and growing up in the shadow of the mushroom cloud. Explores whether AI can create new forms of engagement with trauma through virtual beings.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="badge-outline">Memoir</span>
+              <span class="badge-outline">AI</span>
+              <span class="badge-outline">Substack</span>
+              <span class="badge-outline">Palgrave</span>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <div class="card border-t-letto">
+            <span class="badge-letto mb-3">Commission</span>
+            <h3 class="heading-md mb-2">
+              <a href="/projects/il-letto" class="text-graphite hover:text-[#6B1D3A] transition-colors">Il Letto</a>
+            </h3>
+            <p class="text-ash text-sm mb-4">A play about Elvira Bonturi, Puccini's wife. Commissioned by Copenhagen Opera Festival via Helios Collective.</p>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="badge-outline">Opera</span>
+              <span class="badge-outline">Commission</span>
+              <span class="badge-outline">Copenhagen</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
