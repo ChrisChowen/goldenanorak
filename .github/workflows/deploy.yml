@@ -39,6 +39,13 @@ jobs:
         env:
           ASTRO_BASE: /${{ steps.repo.outputs.name }}/current
 
+      - name: Fix Astro image paths for subdirectory
+        run: |
+          REPO_NAME=${{ steps.repo.outputs.name }}
+          # Rewrite absolute /images/ paths in built HTML to include repo prefix
+          find dist/ -name '*.html' -exec sed -i "s|src=\"/images/|src=\"/${REPO_NAME}/images/|g" {} +
+          find dist/ -name '*.html' -exec sed -i "s|content=\"/images/|content=\"/${REPO_NAME}/images/|g" {} +
+
       - name: Assemble pages output
         run: |
           mkdir -p _site
@@ -53,7 +60,7 @@ jobs:
           # Copy actual images (resolve symlink)
           cp -rL frontend-design/images _site/new/images
 
-          # Shared images at root (Astro uses absolute /images/ paths)
+          # Shared images at site root so /goldenanorak/images/ resolves
           cp -rL public/images _site/images
 
           # Landing page at root
