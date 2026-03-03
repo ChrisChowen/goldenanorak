@@ -66,6 +66,14 @@ jobs:
           # Copy actual images (resolve symlink)
           cp -rL frontend-design/images _site/new/images
 
+          # Narrative Lab site → /narrative-lab/
+          mkdir -p _site/narrative-lab
+          cp narrative-lab/*.html _site/narrative-lab/
+          cp narrative-lab/*.css _site/narrative-lab/
+          cp narrative-lab/*.js _site/narrative-lab/
+          # Copy actual images (resolve symlink)
+          cp -rL narrative-lab/images _site/narrative-lab/images
+
           # Shared images at site root so /goldenanorak/images/ resolves
           cp -rL public/images _site/images
 

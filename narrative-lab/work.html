@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work | Christopher Hogg</title>
+  <meta name="description" content="Award-winning creative projects by Christopher Hogg: podcast drama, memoir, musical theatre, opera, and AI experiments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo">Christopher Hogg</a>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="work.html" class="active">Work</a>
+        <a href="speaking.html">Speaking</a>
+        <a href="writing.html">Writing</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="work.html" class="active">Work</a>
+    <a href="speaking.html">Speaking</a>
+    <a href="writing.html">Writing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="label label--accent mb-md reveal">The Work</p>
+      <h1 class="reveal">Creative projects spanning podcast drama, memoir, musical theatre, and opera</h1>
+      <p class="text-body-lg mt-lg reveal" style="max-width: 38em;">Each exploring how technology mediates human experience.</p>
+    </div>
+  </section>
+
+
+  <!-- FEATURED PROJECTS -->
+  <section class="section">
+    <div class="container">
+      <div class="work-grid stagger">
+
+        <!-- Rathband -->
+        <a href="rathband.html" class="story-card reveal" id="rathband" style="min-height: 320px;">
+          <div class="story-card__bg">
+            <img src="images/rathband-hero.jpg" alt="Rathband: A Digital Tragedy" loading="eager">
+          </div>
+          <div class="story-card__content">
+            <p class="story-card__tag" style="color: var(--rathband);">Podcast &middot; 2017</p>
+            <h3 class="story-card__title">Rathband: A Digital Tragedy</h3>
+            <p class="story-card__premise">A 3-part podcast designed for visually impaired listenership, exploring how social media mediates trauma, disability, and masculinity. Funded by Arts Council England. Featuring Douglas Rushkoff.</p>
+            <p class="story-card__proof">BBC Podcast of the Year &middot; iTunes #1 &middot; 30,000+ downloads</p>
+          </div>
+        </a>
+
+        <!-- Cassie & Corey -->
+        <a href="work.html#cassie" class="story-card reveal" id="cassie">
+          <div class="story-card__bg">
+            <img src="images/cassie-corey.jpg" alt="Cassie & Corey" loading="eager">
+          </div>
+          <div class="story-card__content">
+            <p class="story-card__tag" style="color: var(--cassie);">Musical &middot; 2019</p>
+            <h3 class="story-card__title">Cassie &amp; Corey</h3>
+            <p class="story-card__premise">A podcast musical about eating disorders, created with the NHS Maudsley Hospital and South London D&amp;B crew GTA. Free PSHE resource in 231 schools.</p>
+            <p class="story-card__proof">British Podcast Awards Silver &amp; Bronze &middot; 11,000 listens</p>
+          </div>
+        </a>
+
+        <!-- 9 Holidays -->
+        <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="story-card reveal" id="holidays">
+          <div class="story-card__bg">
+            <img src="images/9-holidays-toys.jpg" alt="9 Holidays I Wish I Had Never Been On" loading="lazy">
+          </div>
+          <div class="story-card__content">
+            <p class="story-card__tag" style="color: var(--holidays);">Memoir &middot; Ongoing</p>
+            <h3 class="story-card__title">9 Holidays I Wish I Had Never Been On</h3>
+            <p class="story-card__premise">A 425-page memoir exploring domestic violence and whether AI can create new forms of engagement with trauma through virtual beings.</p>
+            <p class="story-card__proof">Palgrave invitation &middot; 328+ Substack subscribers</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- IL LETTO + RESEARCH -->
+  <section class="section section--surface">
+    <div class="container">
+      <div class="chapter reveal">
+        <span class="chapter__number"></span>
+        <span class="chapter__rule"></span>
+        <span class="chapter__title">More Work</span>
+      </div>
+
+      <div class="work-list stagger">
+
+        <!-- Il Letto -->
+        <div class="card reveal" id="letto">
+          <div style="display: flex; gap: var(--space-xs); margin-bottom: var(--space-sm);">
+            <span class="tag--letto tag">Opera</span>
+            <span class="tag">Commission</span>
+          </div>
+          <h3 class="card__title">Il Letto</h3>
+          <p class="card__desc">A play about Elvira Bonturi, Puccini's wife. Commissioned by Copenhagen Opera Festival via Helios Collective (2017). The untold story behind one of opera&rsquo;s greatest composers, through the eyes of the woman who lived with his genius.</p>
+        </div>
+
+        <!-- AI & Memoir Research -->
+        <div class="card reveal">
+          <div style="display: flex; gap: var(--space-xs); margin-bottom: var(--space-sm);">
+            <span class="tag--accent tag">Research</span>
+            <span class="tag">AI</span>
+          </div>
+          <h3 class="card__title">AI &amp; Memoir Research</h3>
+          <p class="card__desc">Exploring whether a &ldquo;virtual being&rdquo; built from memoir text can enhance understanding of trauma. Can a virtual representation of one&rsquo;s childhood self, constrained in knowledge to a specific timeframe, offer new therapeutic pathways?</p>
+        </div>
+
+        <!-- MOOC -->
+        <div class="card reveal">
+          <div style="display: flex; gap: var(--space-xs); margin-bottom: var(--space-sm);">
+            <span class="tag--accent tag">Education</span>
+            <span class="tag">2026&ndash;2029</span>
+          </div>
+          <h3 class="card__title">MOOC: Narrative Foundations for Immersive Media</h3>
+          <p class="card__desc">Developing a massive open online course on narrative foundations for immersive media and video games, bringing storytelling expertise to emerging interactive formats. Royal Holloway.</p>
+        </div>
+
+        <!-- TEDxUAL -->
+        <div class="card reveal">
+          <div style="display: flex; gap: var(--space-xs); margin-bottom: var(--space-sm);">
+            <span class="tag--rathband tag">TEDx</span>
+            <span class="tag">2017</span>
+          </div>
+          <h3 class="card__title">TEDxUAL</h3>
+          <p class="card__desc">Talk on the Rathband play and the role of social media in mediating tragedy. Exploring how digital forces can be &ldquo;tragic&rdquo; in the classical dramatic sense.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RESEARCH STRANDS -->
+  <section class="section">
+    <div class="container">
+      <div class="chapter reveal">
+        <span class="chapter__number"></span>
+        <span class="chapter__rule"></span>
+        <span class="chapter__title">Research Strands</span>
+      </div>
+
+      <div style="display: grid; gap: var(--space-lg);" class="stagger">
+        <div class="card card--top-accent reveal">
+          <p class="label label--accent mb-sm">Strand 1</p>
+          <h3 class="card__title">New Writing + Emerging Technologies</h3>
+          <p class="card__desc">Pioneering work combining creative writing with emerging tech. From BBC award-winning podcast drama to smartphone musicals, this strand explores how new technologies create new narrative forms and reach audiences that traditional forms cannot.</p>
+        </div>
+        <div class="card card--top-rathband reveal">
+          <p class="label mb-sm" style="color: var(--rathband);">Strand 2</p>
+          <h3 class="card__title">AI, Creativity &amp; Education</h3>
+          <p class="card__desc">Exploring how AI is reshaping human creativity, how students perceive their own intelligence relative to AI, and how assessment must evolve. Published in Times Higher Education and Wonkhe.</p>
+        </div>
+        <div class="card card--top-cassie reveal">
+          <p class="label mb-sm" style="color: var(--cassie);">Strand 3</p>
+          <h3 class="card__title">Trauma, Identity &amp; Digital Mediation</h3>
+          <p class="card__desc">How technology mediates human suffering, identity, and connection. From the Rathband tragedy to memoir about childhood domestic violence. What intelligence does trauma create?</p>
+        </div>
+      </div>
+
+      <div class="mt-2xl text-center reveal">
+        <a href="https://pure.royalholloway.ac.uk" target="_blank" rel="noopener" class="btn btn--outline">View on Royal Holloway Pure</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="site-header__logo" style="display: inline-block; margin-bottom: var(--space-md);">Christopher Hogg</a>
+          <p style="max-width: 24em;">Creative technologist, educator, and award-winning playwright. Lecturer at Royal Holloway, University of London.</p>
+        </div>
+        <div>
+          <p class="label mb-md">Elsewhere</p>
+          <div class="footer-links">
+            <a href="https://www.linkedin.com/in/chrishogg" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener">Substack</a>
+            <a href="https://www.instagram.com/goldenanorak" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://x.com/goldenanorak" target="_blank" rel="noopener">X / Twitter</a>
+            <a href="https://open.spotify.com/show/43XCZFTyK1dF0DmAMzghWY" target="_blank" rel="noopener">Spotify</a>
+          </div>
+        </div>
+        <div>
+          <p class="label mb-md">Subscribe</p>
+          <p style="max-width: 20em; margin-bottom: var(--space-md);">Writing on AI, creativity, education, and memoir.</p>
+          <a href="https://christopherhogg.substack.com" target="_blank" rel="noopener" class="btn btn--outline">Read on Substack</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Christopher Hogg</p>
+        <p>The Narrative Lab.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

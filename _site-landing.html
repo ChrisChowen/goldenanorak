@@ -16,7 +16,7 @@
       justify-content: center;
     }
     .container {
-      max-width: 640px;
+      max-width: 860px;
       padding: 3rem 2rem;
       text-align: center;
     }
@@ -34,11 +34,11 @@
     }
     .cards {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 1.5rem;
       margin-bottom: 3rem;
     }
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
       .cards { grid-template-columns: 1fr; }
     }
     a.card {
@@ -73,6 +73,8 @@
       line-height: 1.5;
     }
     .card--new .card__label { color: #D72638; }
+    .card--lab .card__label { color: #a78bfa; }
+    a.card--lab:hover { border-color: #a78bfa; }
     .footer {
       font-size: 0.7rem;
       color: #555;
@@ -82,7 +84,7 @@
 <body>
   <div class="container">
     <h1>Christopher Hogg</h1>
-    <p class="subtitle">Portfolio site — two design directions</p>
+    <p class="subtitle">Portfolio site — three design directions</p>
 
     <div class="cards">
       <a href="current/" class="card">
@@ -94,6 +96,11 @@
         <p class="card__label">Option B</p>
         <p class="card__title">Editorial Design</p>
         <p class="card__desc">Bolder typography, editorial layout, richer imagery. Static HTML + CSS.</p>
+      </a>
+      <a href="narrative-lab/" class="card card--lab">
+        <p class="card__label">Option C</p>
+        <p class="card__title">The Narrative Lab</p>
+        <p class="card__desc">Dark, cinematic, theatrical. Chapter-based narrative structure with film-grain textures.</p>
       </a>
     </div>
 
