@@ -53,6 +53,9 @@ jobs:
           # Copy actual images (resolve symlink)
           cp -rL frontend-design/images _site/new/images
 
+          # Shared images at root (Astro uses absolute /images/ paths)
+          cp -rL public/images _site/images
+
           # Landing page at root
           cp _site-landing.html _site/index.html
 
