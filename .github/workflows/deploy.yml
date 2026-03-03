@@ -39,12 +39,18 @@ jobs:
         env:
           ASTRO_BASE: /${{ steps.repo.outputs.name }}/current
 
-      - name: Fix Astro image paths for subdirectory
+      - name: Fix Astro paths for subdirectory deployment
         run: |
           REPO_NAME=${{ steps.repo.outputs.name }}
-          # Rewrite absolute /images/ paths in built HTML to include repo prefix
+          BASE_PATH="/${REPO_NAME}/current"
+
+          # Rewrite absolute /images/ paths to include repo prefix
           find dist/ -name '*.html' -exec sed -i "s|src=\"/images/|src=\"/${REPO_NAME}/images/|g" {} +
           find dist/ -name '*.html' -exec sed -i "s|content=\"/images/|content=\"/${REPO_NAME}/images/|g" {} +
+
+          # Rewrite internal navigation links (href="/...") to include base path
+          # Use perl for negative lookahead to avoid double-prefixing Astro-generated paths
+          find dist/ -name '*.html' -exec perl -pi -e "s|href=\"/(?!${REPO_NAME}/)|href=\"${BASE_PATH}/|g" {} +
 
       - name: Assemble pages output
         run: |
